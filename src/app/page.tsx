@@ -1,3 +1,10 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Home - DataTherapy',
+  description: 'Transform uncertainty into clarity with structured data analysis',
+}
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#0a0a0a] text-white">
