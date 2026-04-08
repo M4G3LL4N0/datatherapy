@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from "next";
+import type { Metadata, Viewport } from "next/types";
 import "./globals.css";
 
 export const metadata: Metadata = {
