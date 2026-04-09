@@ -1,7 +1,7 @@
 import { MarketingShell } from '@/components/MarketingShell'
 import { StructuredBrief } from '@/components/StructuredBrief'
 
-export default function AppPage() {
+export default function ApplicationPage() {
   return (
     <MarketingShell
       title="DataTherapy Brief"
