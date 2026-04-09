@@ -14,39 +14,39 @@ export default function Contact() {
           <ul className="mt-4 space-y-4 text-sm">
             <li className="flex items-center gap-3">
               <span className="text-red-400">⚠️</span>
-              <a href="mailto:urgent@datatherapy.ai" className="hover:underline">
+              <Link href="/support" className="hover:underline">
                 Immediate Threat Support
-              </a>
+              </Link>
             </li>
             <li className="flex items-center gap-3">
               <span className="text-blue-400">✉️</span>
-              <a href="mailto:hello@datatherapy.ai" className="hover:underline">
+              <Link href="/contact" className="hover:underline">
                 General Inquiries
-              </a>
+              </Link>
             </li>
             <li className="flex items-center gap-3">
               <span className="text-blue-400">💼</span>
-              <a href="mailto:sales@datatherapy.ai" className="hover:underline">
-                Enterprise Sales
-              </a>
+              <Link href="/enterprise" className="hover:underline">
+                Enterprise Solutions
+              </Link>
             </li>
             <li className="flex items-center gap-3">
               <span className="text-blue-400">🤝</span>
-              <a href="mailto:partners@datatherapy.ai" className="hover:underline">
+              <Link href="/partners" className="hover:underline">
                 Partnerships
-              </a>
+              </Link>
             </li>
             <li className="flex items-center gap-3">
               <span className="text-blue-400">📰</span>
-              <a href="mailto:press@datatherapy.ai" className="hover:underline">
+              <Link href="/press" className="hover:underline">
                 Press Inquiries
-              </a>
+              </Link>
             </li>
             <li className="flex items-center gap-3">
               <span className="text-blue-400">🔒</span>
-              <a href="mailto:security@datatherapy.ai" className="hover:underline">
+              <Link href="/security" className="hover:underline">
                 Security Concerns
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

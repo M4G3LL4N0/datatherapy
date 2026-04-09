@@ -158,14 +158,12 @@ export function StructuredBrief({ sections }: { sections: BriefSection[] }) {
                 )}
                 {item.actions && item.actions.length > 0 && (
                   <div className="mt-3">
-                    <div className="text-xs text-white/60 mb-2">Recommended Actions</div>
+                    <div className="text-xs text-white/60 mb-2">Next Steps</div>
                     <div className="space-y-2">
                       {item.actions.map((action, i) => (
-                        <a
+                        <Link
                           key={i}
                           href={action.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
                           className={cn(
                             "flex items-center justify-between px-3 py-2 rounded-md text-sm",
                             action.priority === 'critical' ? "bg-red-500/10 hover:bg-red-500/15" :
@@ -176,7 +174,7 @@ export function StructuredBrief({ sections }: { sections: BriefSection[] }) {
                         >
                           {action.label}
                           <span className="text-xs text-white/50">→</span>
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   </div>

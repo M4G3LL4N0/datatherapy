@@ -32,14 +32,11 @@ export function Header() {
               Media Cycles
             </Link>
             <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 hidden group-hover:block bg-[#0a0a0a] border border-white/15 rounded-lg p-2 w-48">
-              <Link href="/amplification-cycles/trending" className="block px-3 py-2 text-sm hover:bg-white/5">
-                Trending Topics
+              <Link href="/media" className="block px-3 py-2 text-sm hover:bg-white/5">
+                Media Analysis
               </Link>
-              <Link href="/amplification-cycles/virality" className="block px-3 py-2 text-sm hover:bg-white/5">
-                Viral Patterns
-              </Link>
-              <Link href="/amplification-cycles/sentiment" className="block px-3 py-2 text-sm hover:bg-white/5">
-                Sentiment Analysis
+              <Link href="/trends" className="block px-3 py-2 text-sm hover:bg-white/5">
+                Trend Patterns
               </Link>
             </div>
           </div>
