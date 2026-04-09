@@ -32,10 +32,10 @@ export function Header() {
               Media Cycles
             </Link>
             <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 hidden group-hover:block bg-[#0a0a0a] border border-white/15 rounded-lg p-2 w-48">
-              <Link href="/media" className="block px-3 py-2 text-sm hover:bg-white/5">
+              <Link href="/media-analysis" className="block px-3 py-2 text-sm hover:bg-white/5">
                 Media Analysis
               </Link>
-              <Link href="/trends" className="block px-3 py-2 text-sm hover:bg-white/5">
+              <Link href="/trend-analysis" className="block px-3 py-2 text-sm hover:bg-white/5">
                 Trend Patterns
               </Link>
             </div>
