@@ -1,9 +1,13 @@
 import { cn } from '@/app/lib/utils'
 
 interface BriefItem {
-  type?: 'text' | 'list' | 'action' | 'insight';
+  type?: 'text' | 'list' | 'action' | 'insight' | 'threat' | 'pattern' | 'protection';
   content: string;
   severity?: number;
+  timeframe?: 'immediate' | 'short-term' | 'long-term';
+  mediaImpact?: number;
+  cognitiveLoad?: number;
+  recurrencePattern?: string;
 }
 
 interface BriefSection {
@@ -52,6 +56,22 @@ export function StructuredBrief({ sections }: { sections: BriefSection[] }) {
                       item.severity >= 4 ? "text-yellow-400" :
                       "text-green-400"
                     )}>{item.severity}/10</span>
+                  </div>
+                )}
+                {item.timeframe && (
+                  <div className="mt-2 text-xs text-white/60">
+                    Timeframe: <span className="text-blue-400">{item.timeframe}</span>
+                  </div>
+                )}
+                {item.mediaImpact && (
+                  <div className="mt-2">
+                    <div className="text-xs text-white/60 mb-1">Media Impact</div>
+                    <div className="h-1.5 w-full rounded-full bg-white/10">
+                      <div
+                        className="h-1.5 rounded-full bg-purple-500"
+                        style={{ width: `${item.mediaImpact * 10}%` }}
+                      />
+                    </div>
                   </div>
                 )}
               </div>
