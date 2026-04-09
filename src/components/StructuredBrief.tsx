@@ -1,13 +1,17 @@
 import { cn } from '@/app/lib/utils'
 
 interface BriefItem {
-  type?: 'text' | 'list' | 'action' | 'insight' | 'threat' | 'pattern' | 'protection';
+  type?: 'text' | 'list' | 'action' | 'insight' | 'threat' | 'pattern' | 'protection' | 'response';
   content: string;
   severity?: number;
   timeframe?: 'immediate' | 'short-term' | 'long-term';
   mediaImpact?: number;
   cognitiveLoad?: number;
   recurrencePattern?: string;
+  recurrenceFrequency?: number;
+  confidence?: number;
+  mitigationLevel?: number;
+  sources?: string[];
 }
 
 interface BriefSection {
@@ -41,7 +45,8 @@ export function StructuredBrief({ sections }: { sections: BriefSection[] }) {
                 item.type === 'insight' ? "bg-purple-500/10 border border-purple-500/20" :
                 item.type === 'threat' ? "bg-red-500/10 border border-red-500/20" :
                 item.type === 'pattern' ? "bg-yellow-500/10 border border-yellow-500/20" :
-                item.type === 'protection' ? "bg-green-500/10 border border-green-500/20" : ""
+                item.type === 'protection' ? "bg-green-500/10 border border-green-500/20" :
+                item.type === 'response' ? "bg-indigo-500/10 border border-indigo-500/20" : ""
               )}>
                 {item.type === 'list' ? (
                   <ul className="list-disc pl-5 space-y-1">
@@ -66,14 +71,52 @@ export function StructuredBrief({ sections }: { sections: BriefSection[] }) {
                     Timeframe: <span className="text-blue-400">{item.timeframe}</span>
                   </div>
                 )}
-                {item.mediaImpact && (
+                {(item.mediaImpact || item.cognitiveLoad || item.recurrenceFrequency) && (
+                  <div className="mt-3 grid grid-cols-3 gap-2">
+                    {item.mediaImpact && (
+                      <div>
+                        <div className="text-xs text-white/60 mb-1">Media Impact</div>
+                        <div className="h-1.5 w-full rounded-full bg-white/10">
+                          <div
+                            className="h-1.5 rounded-full bg-purple-500"
+                            style={{ width: `${item.mediaImpact * 10}%` }}
+                          />
+                        </div>
+                      </div>
+                    )}
+                    {item.cognitiveLoad && (
+                      <div>
+                        <div className="text-xs text-white/60 mb-1">Cognitive Load</div>
+                        <div className="h-1.5 w-full rounded-full bg-white/10">
+                          <div
+                            className="h-1.5 rounded-full bg-blue-500"
+                            style={{ width: `${item.cognitiveLoad * 10}%` }}
+                          />
+                        </div>
+                      </div>
+                    )}
+                    {item.recurrenceFrequency && (
+                      <div>
+                        <div className="text-xs text-white/60 mb-1">Recurrence</div>
+                        <div className="h-1.5 w-full rounded-full bg-white/10">
+                          <div
+                            className="h-1.5 rounded-full bg-yellow-500"
+                            style={{ width: `${item.recurrenceFrequency * 10}%` }}
+                          />
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+                {item.sources && item.sources.length > 0 && (
                   <div className="mt-2">
-                    <div className="text-xs text-white/60 mb-1">Media Impact</div>
-                    <div className="h-1.5 w-full rounded-full bg-white/10">
-                      <div
-                        className="h-1.5 rounded-full bg-purple-500"
-                        style={{ width: `${item.mediaImpact * 10}%` }}
-                      />
+                    <div className="text-xs text-white/60 mb-1">Sources</div>
+                    <div className="flex flex-wrap gap-1">
+                      {item.sources.map((source, i) => (
+                        <span key={i} className="text-xs px-2 py-0.5 rounded-full bg-white/5 text-white/60">
+                          {source}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 )}

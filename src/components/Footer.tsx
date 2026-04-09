@@ -47,7 +47,10 @@ export function Footer() {
               Protection Frameworks
             </Link>
             <Link href="/media-amplification" className="text-sm text-white/70 hover:text-white">
-              Media Influence Analysis 
+              Media Influence Analysis
+            </Link>
+            <Link href="/response-framework" className="text-sm text-white/70 hover:text-white">
+              Response Protocols
             </Link>
             <Link href="/technology" className="text-sm text-white/70 hover:text-white">
               Technology

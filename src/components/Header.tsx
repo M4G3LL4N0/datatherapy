@@ -19,6 +19,9 @@ export function Header() {
           <Link href="/amplification-cycles" className="hover:text-white/80">
             Media Cycles
           </Link>
+          <Link href="/response-framework" className="hover:text-white/80">
+            Response Framework
+          </Link>
           <Link href="/pricing" className="hover:text-white/80">
             Pricing
           </Link>
