@@ -11,7 +11,23 @@ interface BriefItem {
   recurrenceFrequency?: number;
   confidence?: number;
   mitigationLevel?: number;
-  sources?: string[];
+  sources?: {
+    name: string;
+    url?: string;
+    reliability?: 'high' | 'medium' | 'low';
+    timestamp?: string;
+  }[];
+  metadata?: {
+    firstObserved?: string;
+    lastObserved?: string;
+    peakIntensity?: number;
+    relatedPatterns?: string[];
+  };
+  actions?: {
+    label: string;
+    url: string;
+    priority: 'critical' | 'high' | 'medium' | 'low';
+  }[];
 }
 
 interface BriefSection {
@@ -109,14 +125,86 @@ export function StructuredBrief({ sections }: { sections: BriefSection[] }) {
                   </div>
                 )}
                 {item.sources && item.sources.length > 0 && (
-                  <div className="mt-2">
-                    <div className="text-xs text-white/60 mb-1">Sources</div>
-                    <div className="flex flex-wrap gap-1">
+                  <div className="mt-3">
+                    <div className="text-xs text-white/60 mb-2">Sources</div>
+                    <div className="space-y-2">
                       {item.sources.map((source, i) => (
-                        <span key={i} className="text-xs px-2 py-0.5 rounded-full bg-white/5 text-white/60">
-                          {source}
-                        </span>
+                        <div key={i} className="flex items-center gap-2 text-xs">
+                          <span className={cn(
+                            "w-2 h-2 rounded-full",
+                            source.reliability === 'high' ? "bg-green-500" :
+                            source.reliability === 'medium' ? "bg-yellow-500" :
+                            "bg-red-500"
+                          )} />
+                          {source.url ? (
+                            <a 
+                              href={source.url} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="text-white/70 hover:text-white hover:underline"
+                            >
+                              {source.name}
+                            </a>
+                          ) : (
+                            <span className="text-white/70">{source.name}</span>
+                          )}
+                          {source.timestamp && (
+                            <span className="text-white/50 ml-auto">{source.timestamp}</span>
+                          )}
+                        </div>
                       ))}
+                    </div>
+                  </div>
+                )}
+                {item.actions && item.actions.length > 0 && (
+                  <div className="mt-3">
+                    <div className="text-xs text-white/60 mb-2">Recommended Actions</div>
+                    <div className="space-y-2">
+                      {item.actions.map((action, i) => (
+                        <a
+                          key={i}
+                          href={action.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={cn(
+                            "flex items-center justify-between px-3 py-2 rounded-md text-sm",
+                            action.priority === 'critical' ? "bg-red-500/10 hover:bg-red-500/15" :
+                            action.priority === 'high' ? "bg-yellow-500/10 hover:bg-yellow-500/15" :
+                            action.priority === 'medium' ? "bg-blue-500/10 hover:bg-blue-500/15" :
+                            "bg-white/5 hover:bg-white/10"
+                          )}
+                        >
+                          {action.label}
+                          <span className="text-xs text-white/50">→</span>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {item.metadata && (
+                  <div className="mt-3">
+                    <div className="text-xs text-white/60 mb-2">Pattern Metadata</div>
+                    <div className="grid grid-cols-2 gap-2 text-xs text-white/70">
+                      {item.metadata.firstObserved && (
+                        <div>
+                          <span className="text-white/50">First Observed:</span> {item.metadata.firstObserved}
+                        </div>
+                      )}
+                      {item.metadata.lastObserved && (
+                        <div>
+                          <span className="text-white/50">Last Observed:</span> {item.metadata.lastObserved}
+                        </div>
+                      )}
+                      {item.metadata.peakIntensity && (
+                        <div>
+                          <span className="text-white/50">Peak Intensity:</span> {item.metadata.peakIntensity}/10
+                        </div>
+                      )}
+                      {item.metadata.relatedPatterns && (
+                        <div className="col-span-2">
+                          <span className="text-white/50">Related Patterns:</span> {item.metadata.relatedPatterns.join(', ')}
+                        </div>
+                      )}
                     </div>
                   </div>
                 )}
