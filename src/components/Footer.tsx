@@ -39,21 +39,21 @@ export function Footer() {
             </Link>
           </div>
           <div className="flex flex-col gap-4">
-            <h3 className="text-sm font-semibold">Clarity Tools</h3>
-            <Link href="/sample-brief" className="text-sm text-white/70 hover:text-white">
-              Sample Analysis
+            <h3 className="text-sm font-semibold">Threat Framework</h3>
+            <Link href="/threat-identification" className="text-sm text-white/70 hover:text-white">
+              Identification
             </Link>
-            <Link href="/technology" className="text-sm text-white/70 hover:text-white">
-              Technology Overview
+            <Link href="/threat-assessment" className="text-sm text-white/70 hover:text-white">
+              Assessment
             </Link>
-            <Link href="/product" className="text-sm text-white/70 hover:text-white">
-              Product Features
+            <Link href="/response-framework" className="text-sm text-white/70 hover:text-white">
+              Response
             </Link>
-            <Link href="/technology" className="text-sm text-white/70 hover:text-white">
-              Technology
+            <Link href="/case-studies" className="text-sm text-white/70 hover:text-white">
+              Case Studies
             </Link>
-            <Link href="/sample-brief" className="text-sm text-white/70 hover:text-white">
-              Sample Brief
+            <Link href="/methodology" className="text-sm text-white/70 hover:text-white">
+              Methodology
             </Link>
           </div>
           <div className="flex flex-col gap-4">

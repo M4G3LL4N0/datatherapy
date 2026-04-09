@@ -14,45 +14,57 @@ export function Header() {
         </div>
         <div className="flex items-center gap-5 text-sm font-medium">
           <div className="relative group">
-            <Link href="/threat-patterns" className="hover:text-white/80">
-              Threat Patterns
+            <Link href="/threat-identification" className="hover:text-white/80">
+              Identify
             </Link>
             <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 hidden group-hover:block bg-[#0a0a0a] border border-white/15 rounded-lg p-2 w-48">
               <Link href="/threat-patterns" className="flex items-center gap-2 px-3 py-2 text-sm hover:bg-white/5">
                 <span className="w-2 h-2 rounded-full bg-red-500"></span>
-                Threat Patterns Overview
+                Pattern Library
               </Link>
-              <Link href="/sample-brief" className="block px-3 py-2 text-sm hover:bg-white/5">
-                Sample Analysis
+              <Link href="/media-analysis" className="flex items-center gap-2 px-3 py-2 text-sm hover:bg-white/5">
+                <span className="w-2 h-2 rounded-full bg-purple-500"></span>
+                Media Signals
+              </Link>
+              <Link href="/trend-analysis" className="flex items-center gap-2 px-3 py-2 text-sm hover:bg-white/5">
+                <span className="w-2 h-2 rounded-full bg-yellow-500"></span>
+                Trend Detection
               </Link>
             </div>
           </div>
           <div className="relative group">
-            <Link href="/amplification-cycles" className="hover:text-white/80">
-              Media Cycles
+            <Link href="/threat-assessment" className="hover:text-white/80">
+              Assess
             </Link>
             <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 hidden group-hover:block bg-[#0a0a0a] border border-white/15 rounded-lg p-2 w-48">
-              <Link href="/media-analysis" className="block px-3 py-2 text-sm hover:bg-white/5">
-                Media Analysis
+              <Link href="/sample-brief" className="block px-3 py-2 text-sm hover:bg-white/5">
+                Severity Analysis
               </Link>
-              <Link href="/trend-analysis" className="block px-3 py-2 text-sm hover:bg-white/5">
-                Trend Patterns
+              <Link href="/impact-assessment" className="block px-3 py-2 text-sm hover:bg-white/5">
+                Impact Projections
+              </Link>
+              <Link href="/cognitive-load" className="block px-3 py-2 text-sm hover:bg-white/5">
+                Cognitive Impact
               </Link>
             </div>
           </div>
           <div className="relative group">
             <Link href="/response-framework" className="hover:text-white/80">
-              Response Framework
+              Respond
             </Link>
             <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 hidden group-hover:block bg-[#0a0a0a] border border-white/15 rounded-lg p-2 w-48">
-              <Link href="/response-framework/immediate" className="block px-3 py-2 text-sm hover:bg-white/5">
-                Immediate Actions
+              <div className="px-3 py-2 text-xs text-white/50">Timeframe:</div>
+              <Link href="/response-framework/immediate" className="flex items-center gap-2 px-3 py-2 text-sm hover:bg-white/5">
+                <span className="w-2 h-2 rounded-full bg-red-500"></span>
+                Immediate (0-72h)
               </Link>
-              <Link href="/response-framework/short-term" className="block px-3 py-2 text-sm hover:bg-white/5">
-                Short-term Strategies
+              <Link href="/response-framework/short-term" className="flex items-center gap-2 px-3 py-2 text-sm hover:bg-white/5">
+                <span className="w-2 h-2 rounded-full bg-yellow-500"></span>
+                Short-term (72h-2w)
               </Link>
-              <Link href="/response-framework/long-term" className="block px-3 py-2 text-sm hover:bg-white/5">
-                Long-term Solutions
+              <Link href="/response-framework/long-term" className="flex items-center gap-2 px-3 py-2 text-sm hover:bg-white/5">
+                <span className="w-2 h-2 rounded-full bg-green-500"></span>
+                Long-term (2w+)
               </Link>
             </div>
           </div>
