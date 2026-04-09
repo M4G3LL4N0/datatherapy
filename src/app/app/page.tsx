@@ -32,22 +32,45 @@ export default function AppPage() {
         sections: [
           {
             title: "Situation Analysis",
-            content: input || "The user is experiencing uncertainty about a complex situation that requires structured analysis.",
-            severity: 6
+            items: [{
+              type: 'text',
+              content: input || "The user is experiencing uncertainty about a complex situation that requires structured analysis.",
+              severity: 6
+            }]
           },
           {
-            title: "Key Factors",
-            content: "1. Multiple variables at play\n2. Emotional component present\n3. Time-sensitive considerations"
+            title: "Key Factors", 
+            items: [{
+              type: 'list',
+              content: "Multiple variables at play\nEmotional component present\nTime-sensitive considerations",
+            }]
           },
           {
             title: "Recommended Actions",
-            content: "1. Break down into smaller components\n2. Prioritize based on impact\n3. Create timeline for resolution",
-            severity: 5
+            items: [{
+              type: 'action',
+              content: "Immediate: Break situation into smaller, manageable components",
+              severity: 5
+            },{
+              type: 'action', 
+              content: "Short-term: Prioritize actions based on highest impact",
+              severity: 4
+            },{
+              type: 'action',
+              content: "Ongoing: Establish timeline for resolution",
+              severity: 3
+            }]
           },
           {
-            title: "Long-term Perspective",
-            content: "This situation is part of a larger pattern that can be addressed systematically.",
-            severity: 4
+            title: "Strategic Insights",
+            items: [{
+              type: 'insight',
+              content: "This situation reflects a pattern that can be systematically addressed",
+              severity: 4
+            },{
+              type: 'insight',
+              content: "Long-term solution requires addressing underlying causes"
+            }]
           }
         ]
       })
