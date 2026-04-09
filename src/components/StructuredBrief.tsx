@@ -38,7 +38,10 @@ export function StructuredBrief({ sections }: { sections: BriefSection[] }) {
               <div key={itemIndex} className={cn(
                 "p-3 rounded-md",
                 item.type === 'action' ? "bg-blue-500/10 border border-blue-500/20" :
-                item.type === 'insight' ? "bg-purple-500/10 border border-purple-500/20" : ""
+                item.type === 'insight' ? "bg-purple-500/10 border border-purple-500/20" :
+                item.type === 'threat' ? "bg-red-500/10 border border-red-500/20" :
+                item.type === 'pattern' ? "bg-yellow-500/10 border border-yellow-500/20" :
+                item.type === 'protection' ? "bg-green-500/10 border border-green-500/20" : ""
               )}>
                 {item.type === 'list' ? (
                   <ul className="list-disc pl-5 space-y-1">
