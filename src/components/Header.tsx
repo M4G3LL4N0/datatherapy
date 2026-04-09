@@ -8,8 +8,8 @@ export function Header() {
           <Link href="/" className="text-lg font-semibold">
             DataTherapy
           </Link>
-          <span className="rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-2.5 py-1 text-xs font-medium text-white shadow-[0_0_8px_rgba(236,72,153,0.3)]">
-            Premium
+          <span className="rounded-full bg-gradient-to-r from-blue-500 to-blue-600 px-2.5 py-1 text-xs font-medium text-white shadow-[0_0_8px_rgba(37,99,235,0.3)]">
+            Enterprise
           </span>
         </div>
         <div className="flex items-center gap-5 text-sm font-medium">

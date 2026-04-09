@@ -52,7 +52,22 @@ export function Footer() {
           </div>
         </div>
         <div className="border-t border-white/15 pt-8 text-center text-sm text-white/50">
-          © {new Date().getFullYear()} DataTherapy. All rights reserved.
+          <div className="flex flex-col items-center gap-6">
+            <div className="flex items-center gap-6">
+              <span className="text-xs font-medium text-white/50">Trusted by:</span>
+              <div className="flex items-center gap-4 opacity-70">
+                <span>Fortune 100</span>
+                <span>•</span>
+                <span>Government</span>
+                <span>•</span>
+                <span>Global 2000</span>
+              </div>
+            </div>
+            <div className="text-xs text-white/50">
+              © {new Date().getFullYear()} DataTherapy, Inc. All rights reserved.<br />
+              DataTherapy® is a registered trademark of DataTherapy, Inc.
+            </div>
+          </div>
         </div>
       </div>
     </footer>
