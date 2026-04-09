@@ -1,17 +1,49 @@
-export type FearCategory = {
+export type FearPattern = {
   id: string;
   name: string;
   description: string;
   severityRange: [number, number];
-  recurrencePatterns: string[];
-  mediaAmplificationScore: number;
-  cognitiveImpact: number;
-  relatedCategories: string[];
-  mitigationStrategies: {
-    immediate: string[];
-    shortTerm: string[];
-    longTerm: string[];
+  recurrencePatterns: {
+    name: string;
+    frequency: 'daily'|'weekly'|'monthly'|'quarterly'|'event-driven';
+    triggers: string[];
+  }[];
+  mediaAmplification: {
+    score: number;
+    commonChannels: string[];
+    sentimentTrend: 'increasing'|'decreasing'|'stable';
   };
+  cognitiveProfile: {
+    impactScore: number;
+    affectedGroups: string[];
+    recoveryTime: string;
+  };
+  relatedPatterns: {
+    id: string;
+    relationship: 'precursor'|'concurrent'|'aftermath';
+  }[];
+  mitigationFrameworks: {
+    immediate: {
+      action: string;
+      resources: string[];
+      successMetrics: string[];
+    }[];
+    shortTerm: {
+      action: string;
+      timeline: string;
+      dependencies: string[];
+    }[];
+    longTerm: {
+      action: string;
+      implementation: string;
+      expectedOutcome: string;
+    }[];
+  };
+  caseStudies?: {
+    title: string;
+    outcome: string;
+    lessons: string[];
+  }[];
 };
 
 export const fearCategories: Record<string, FearCategory> = {

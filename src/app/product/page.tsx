@@ -259,12 +259,38 @@ export default function Product() {
       tag="DataTherapy • Product"
     >
       <div className="space-y-16">
-        {/* Interactive Demo Section */}
+        {/* Pattern Documentation System */}
         <section>
-          <h2 className="text-2xl font-semibold">Live Threat Brief Example</h2>
+          <h2 className="text-2xl font-semibold">Structured Pattern Library</h2>
           <p className="mt-2 text-white/70">
-            See how DataTherapy structures complex threat information
+            Comprehensive documentation for every known fear pattern
           </p>
+          <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-3">
+            <div className="rounded-xl border border-white/15 p-6 bg-gradient-to-b from-[#0a0a0a] to-[#0a0a0a]/50">
+              <h3 className="font-medium">Pattern Identification</h3>
+              <ul className="mt-3 space-y-2 text-sm text-white/80">
+                <li>• Signature detection algorithms</li>
+                <li>• Historical pattern matching</li>
+                <li>• Cross-source validation</li>
+              </ul>
+            </div>
+            <div className="rounded-xl border border-white/15 p-6 bg-gradient-to-b from-[#0a0a0a] to-[#0a0a0a]/50">
+              <h3 className="font-medium">Documentation Standards</h3>
+              <ul className="mt-3 space-y-2 text-sm text-white/80">
+                <li>• Severity scoring framework</li>
+                <li>• Recurrence tracking</li>
+                <li>• Media amplification metrics</li>
+              </ul>
+            </div>
+            <div className="rounded-xl border border-white/15 p-6 bg-gradient-to-b from-[#0a0a0a] to-[#0a0a0a]/50">
+              <h3 className="font-medium">Response Protocols</h3>
+              <ul className="mt-3 space-y-2 text-sm text-white/80">
+                <li>• Time-bound action plans</li>
+                <li>• Department-specific guidance</li>
+                <li>• Effectiveness tracking</li>
+              </ul>
+            </div>
+          </div>
           <div className="mt-6 rounded-xl border border-white/15 bg-gradient-to-b from-[#0a0a0a] to-[#0a0a0a]/50 p-1 shadow-[0_0_30px_rgba(255,255,255,0.03)]">
             <StructuredBrief sections={demoBriefSections} />
           </div>

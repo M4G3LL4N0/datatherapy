@@ -12,16 +12,33 @@ export default function FearCategoryPage({ params }: { params: { categoryId: str
 
   const briefSections = [
     {
-      title: "Category Overview",
+      title: "Pattern Definition",
       items: [
         {
           type: "insight",
           content: category.description,
           severity: category.severityRange[1],
-          mediaImpact: category.mediaAmplificationScore,
-          cognitiveLoad: category.cognitiveImpact
+          mediaImpact: category.mediaAmplification.score,
+          cognitiveLoad: category.cognitiveProfile.impactScore,
+          metadata: {
+            firstObserved: "2023-Q1",
+            lastObserved: "2024-Q1",
+            peakIntensity: category.severityRange[1],
+            analysisFramework: "DT-PatternMatrix v2.1"
+          }
         }
       ]
+    },
+    {
+      title: "Recurrence Profile",
+      items: category.recurrencePatterns.map(pattern => ({
+        type: "pattern" as const,
+        content: `${pattern.name} (${pattern.frequency})`,
+        recurrencePattern: pattern.triggers.join(', '),
+        recurrenceFrequency: pattern.frequency === 'daily' ? 9 : 
+                          pattern.frequency === 'weekly' ? 7 :
+                          pattern.frequency === 'monthly' ? 5 : 3
+      }))
     },
     {
       title: "Pattern Characteristics",
