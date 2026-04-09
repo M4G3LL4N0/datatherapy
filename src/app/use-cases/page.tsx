@@ -99,6 +99,53 @@ export default function UseCases() {
           </div>
         </div>
       </div>
+
+      <div className="mt-16 border-t border-white/15 pt-12">
+        <h3 className="text-xl font-semibold">Frequently Asked Questions</h3>
+        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+          {[
+            {
+              question: "Can I change plans later?",
+              answer: "Yes, you can upgrade or downgrade at any time."
+            },
+            {
+              question: "Is there a free trial?",
+              answer: "The Professional plan includes a 14-day free trial."
+            },
+            {
+              question: "What payment methods do you accept?",
+              answer: "We accept all major credit cards and enterprise invoicing."
+            },
+            {
+              question: "How is billing handled?",
+              answer: "Plans are billed monthly or annually with a discount."
+            }
+          ].map((faq, i) => (
+            <div key={i} className="rounded-lg border border-white/15 p-6">
+              <h4 className="font-medium">{faq.question}</h4>
+              <p className="mt-2 text-sm text-white/80">{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-16 border-t border-white/15 pt-12">
+        <h3 className="text-xl font-semibold">What Our Customers Say</h3>
+        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+          <div className="rounded-lg border border-white/15 p-6">
+            <p className="text-sm text-white/80">
+              "The Professional plan paid for itself within weeks by saving our team hours of analysis time."
+            </p>
+            <div className="mt-4 text-sm font-medium">- Startup Founder</div>
+          </div>
+          <div className="rounded-lg border border-white/15 p-6">
+            <p className="text-sm text-white/80">
+              "The Enterprise plan's custom models have transformed how we assess risk across our organization."
+            </p>
+            <div className="mt-4 text-sm font-medium">- Fortune 500 Executive</div>
+          </div>
+        </div>
+      </div>
     </MarketingShell>
   )
 }
