@@ -39,9 +39,15 @@ export function Footer() {
             </Link>
           </div>
           <div className="flex flex-col gap-4">
-            <h3 className="text-sm font-semibold">Resources</h3>
+            <h3 className="text-sm font-semibold">Clarity Tools</h3>
             <Link href="/use-cases" className="text-sm text-white/70 hover:text-white">
-              Use Cases
+              Decision Frameworks
+            </Link>
+            <Link href="/technology" className="text-sm text-white/70 hover:text-white">
+              Cognitive Mapping
+            </Link>
+            <Link href="/sample-brief" className="text-sm text-white/70 hover:text-white">
+              Anxiety Reduction
             </Link>
             <Link href="/technology" className="text-sm text-white/70 hover:text-white">
               Technology

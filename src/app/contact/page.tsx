@@ -3,9 +3,9 @@ import { MarketingShell } from '@/components/MarketingShell'
 export default function Contact() {
   return (
     <MarketingShell
-      title="Get in touch"
-      subtitle="We're here to help"
-      description="Have questions about our services or want to learn more? We'd love to hear from you."
+      title="Find Clarity"
+      subtitle="Transform uncertainty into understanding"
+      description="Whether you're facing complex decisions or seeking clarity in uncertain times, our team is here to help you navigate through the noise."
       tag="DataTherapy • Contact Us"
     >
       <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">

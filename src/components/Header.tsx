@@ -14,10 +14,10 @@ export function Header() {
         </div>
         <div className="flex items-center gap-5 text-sm font-medium">
           <Link href="/product" className="hover:text-white/80">
-            Product
+            Clarity Tools
           </Link>
           <Link href="/use-cases" className="hover:text-white/80">
-            Use Cases
+            Decision Frameworks
           </Link>
           <Link href="/pricing" className="hover:text-white/80">
             Pricing
