@@ -11,6 +11,9 @@ interface BriefItem {
   recurrenceFrequency?: number;
   confidence?: number;
   mitigationLevel?: number;
+  detectionMethod?: 'automated' | 'manual' | 'hybrid';
+  analysisType?: 'quantitative' | 'qualitative' | 'mixed';
+  responseStatus?: 'pending' | 'active' | 'completed';
   sources?: {
     name: string;
     url?: string;
@@ -22,11 +25,14 @@ interface BriefItem {
     lastObserved?: string;
     peakIntensity?: number;
     relatedPatterns?: string[];
+    analysisFramework?: string;
+    responseEffectiveness?: number;
   };
   actions?: {
     label: string;
     url: string;
     priority: 'critical' | 'high' | 'medium' | 'low';
+    status?: 'pending' | 'in-progress' | 'completed';
   }[];
 }
 

@@ -17,18 +17,19 @@ export function Header() {
             <Link href="/threat-identification" className="hover:text-white/80">
               Identify
             </Link>
-            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 hidden group-hover:block bg-[#0a0a0a] border border-white/15 rounded-lg p-2 w-48">
+            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 hidden group-hover:block bg-[#0a0a0a] border border-white/15 rounded-lg p-2 w-56">
+              <div className="px-3 py-2 text-xs text-white/50">Detection Tools:</div>
               <Link href="/threat-patterns" className="flex items-center gap-2 px-3 py-2 text-sm hover:bg-white/5">
                 <span className="w-2 h-2 rounded-full bg-red-500"></span>
-                Pattern Library
+                Pattern Recognition
               </Link>
               <Link href="/media-analysis" className="flex items-center gap-2 px-3 py-2 text-sm hover:bg-white/5">
                 <span className="w-2 h-2 rounded-full bg-purple-500"></span>
-                Media Signals
+                Media Signal Tracking
               </Link>
               <Link href="/trend-analysis" className="flex items-center gap-2 px-3 py-2 text-sm hover:bg-white/5">
                 <span className="w-2 h-2 rounded-full bg-yellow-500"></span>
-                Trend Detection
+                Emerging Trend Detection
               </Link>
             </div>
           </div>
@@ -36,15 +37,19 @@ export function Header() {
             <Link href="/threat-assessment" className="hover:text-white/80">
               Assess
             </Link>
-            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 hidden group-hover:block bg-[#0a0a0a] border border-white/15 rounded-lg p-2 w-48">
-              <Link href="/sample-brief" className="block px-3 py-2 text-sm hover:bg-white/5">
-                Severity Analysis
+            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 hidden group-hover:block bg-[#0a0a0a] border border-white/15 rounded-lg p-2 w-56">
+              <div className="px-3 py-2 text-xs text-white/50">Analysis Dimensions:</div>
+              <Link href="/sample-brief" className="flex items-center gap-2 px-3 py-2 text-sm hover:bg-white/5">
+                <span className="w-2 h-2 rounded-full bg-blue-500"></span>
+                Threat Severity Scoring
               </Link>
-              <Link href="/impact-assessment" className="block px-3 py-2 text-sm hover:bg-white/5">
-                Impact Projections
+              <Link href="/impact-assessment" className="flex items-center gap-2 px-3 py-2 text-sm hover:bg-white/5">
+                <span className="w-2 h-2 rounded-full bg-green-500"></span>
+                Multi-Dimensional Impact
               </Link>
-              <Link href="/cognitive-load" className="block px-3 py-2 text-sm hover:bg-white/5">
-                Cognitive Impact
+              <Link href="/cognitive-load" className="flex items-center gap-2 px-3 py-2 text-sm hover:bg-white/5">
+                <span className="w-2 h-2 rounded-full bg-purple-500"></span>
+                Cognitive Strain Analysis
               </Link>
             </div>
           </div>
@@ -52,19 +57,19 @@ export function Header() {
             <Link href="/response-framework" className="hover:text-white/80">
               Respond
             </Link>
-            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 hidden group-hover:block bg-[#0a0a0a] border border-white/15 rounded-lg p-2 w-48">
-              <div className="px-3 py-2 text-xs text-white/50">Timeframe:</div>
+            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 hidden group-hover:block bg-[#0a0a0a] border border-white/15 rounded-lg p-2 w-56">
+              <div className="px-3 py-2 text-xs text-white/50">Response Protocols:</div>
               <Link href="/response-framework/immediate" className="flex items-center gap-2 px-3 py-2 text-sm hover:bg-white/5">
                 <span className="w-2 h-2 rounded-full bg-red-500"></span>
-                Immediate (0-72h)
+                Immediate Response (0-72h)
               </Link>
               <Link href="/response-framework/short-term" className="flex items-center gap-2 px-3 py-2 text-sm hover:bg-white/5">
                 <span className="w-2 h-2 rounded-full bg-yellow-500"></span>
-                Short-term (72h-2w)
+                Short-Term Mitigation (72h-2w)
               </Link>
               <Link href="/response-framework/long-term" className="flex items-center gap-2 px-3 py-2 text-sm hover:bg-white/5">
                 <span className="w-2 h-2 rounded-full bg-green-500"></span>
-                Long-term (2w+)
+                Long-Term Resilience (2w+)
               </Link>
             </div>
           </div>

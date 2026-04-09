@@ -41,19 +41,19 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <h3 className="text-sm font-semibold">Threat Framework</h3>
             <Link href="/threat-identification" className="text-sm text-white/70 hover:text-white">
-              Identification
+              Threat Detection
             </Link>
             <Link href="/threat-assessment" className="text-sm text-white/70 hover:text-white">
-              Assessment
+              Impact Analysis
             </Link>
             <Link href="/response-framework" className="text-sm text-white/70 hover:text-white">
-              Response
+              Response Protocols
             </Link>
             <Link href="/case-studies" className="text-sm text-white/70 hover:text-white">
-              Case Studies
+              Real-World Applications
             </Link>
             <Link href="/methodology" className="text-sm text-white/70 hover:text-white">
-              Methodology
+              Analytical Methodology
             </Link>
           </div>
           <div className="flex flex-col gap-4">
