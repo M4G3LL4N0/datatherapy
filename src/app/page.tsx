@@ -1,53 +1,74 @@
-'use client'
+import { MarketingShell } from '@/components/MarketingShell'
+import { StructuredBrief } from '@/components/StructuredBrief'
 
-export default function Home() {
+export default function BriefPage() {
   return (
-    <main className="min-h-screen bg-[#0a0a0a] text-white">
-      <section className="mx-auto flex min-h-screen max-w-6xl flex-col justify-center px-6 py-24">
-        <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-white/80">
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white/50 opacity-75"></span>
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-white"></span>
-          </span>
-          DataTherapy • clarity through data
+    <MarketingShell
+      title="DataTherapy Brief"
+      subtitle="Transform uncertainty into clarity"
+      description="Enter your concern or question to receive a structured DataTherapy Brief with severity assessment, grounding context, and action steps."
+      tag="DataTherapy • Brief"
+    >
+      <form className="mt-8 space-y-4">
+        <div>
+          <label htmlFor="concern" className="block text-sm font-medium text-white/80">
+            What's concerning you?
+          </label>
+          <textarea
+            id="concern"
+            name="concern"
+            rows={4}
+            className="mt-1 w-full rounded-lg border border-white/15 bg-white/5 p-3 text-sm text-white focus:border-white/30 focus:outline-none focus:ring-1 focus:ring-white/30"
+            placeholder="E.g. 'I'm worried about job security due to the economic downturn...'"
+            required
+          />
         </div>
-
-        <h1 className="max-w-4xl text-5xl font-semibold tracking-tight sm:text-7xl">
-          Understand scary things
-          <span className="block text-white/65">with structure, not spirals.</span>
-        </h1>
-
-        <p className="mt-8 max-w-2xl text-lg leading-8 text-white/70">
-          DataTherapy turns fear-triggering news, uncertainty, and overwhelming ideas into grounded explanations,
-          practical context, and calmer understanding.
-        </p>
-
-        <div className="mt-12 grid gap-4 md:grid-cols-3">
-          <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6">
-            <div className="absolute -inset-1 bg-gradient-to-r from-white/5 to-white/0 opacity-0 transition-opacity group-hover:opacity-100"></div>
-            <h2 className="text-lg font-medium">Signal scoring</h2>
-            <p className="mt-3 text-white/65">
-              Separate real urgency from noise with structured interpretation.
-            </p>
+        <div className="flex items-center justify-between">
+          <div className="flex items-center">
+            <input
+              id="urgent"
+              name="urgent"
+              type="checkbox"
+              className="h-4 w-4 rounded border-white/15 bg-white/5 text-blue-600 focus:ring-blue-500"
+            />
+            <label htmlFor="urgent" className="ml-2 block text-sm text-white/80">
+              This is urgent
+            </label>
           </div>
-
-          <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6">
-            <div className="absolute -inset-1 bg-gradient-to-r from-white/5 to-white/0 opacity-0 transition-opacity group-hover:opacity-100"></div>
-            <h2 className="text-lg font-medium">Context layers</h2>
-            <p className="mt-3 text-white/65">
-              Understand what happened, what it means, and what does not need to be assumed.
-            </p>
-          </div>
-
-          <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6">
-            <div className="absolute -inset-1 bg-gradient-to-r from-white/5 to-white/0 opacity-0 transition-opacity group-hover:opacity-100"></div>
-            <h2 className="text-lg font-medium">Grounded next steps</h2>
-            <p className="mt-3 text-white/65">
-              Leave with practical actions and calmer orientation instead of doom-heavy confusion.
-            </p>
-          </div>
+          <button
+            type="submit"
+            className="rounded-full bg-white/10 px-6 py-2 text-sm font-medium text-white hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/30"
+          >
+            Generate Brief
+          </button>
         </div>
-      </section>
-    </main>
+      </form>
+
+      <div className="mt-12 border-t border-white/15 pt-12">
+        <h3 className="text-lg font-semibold">Example Brief</h3>
+        <p className="mt-1 text-sm text-white/60">This demonstrates what your personalized brief will look like</p>
+        <StructuredBrief sections={[
+          {
+            title: "Current Situation",
+            content: "You're feeling overwhelmed by recent news about economic uncertainty and potential layoffs.",
+            severity: 8
+          },
+          {
+            title: "Key Facts",
+            content: "The current economic indicators show a 30% chance of recession. Your company has stable cash reserves but is implementing cost-cutting measures."
+          },
+          {
+            title: "Recommended Actions",
+            content: "1. Review your emergency fund\n2. Update your resume\n3. Schedule a career development discussion with your manager",
+            severity: 6
+          },
+          {
+            title: "Long-term Perspective",
+            content: "Economic cycles are normal. Focus on building transferable skills and maintaining professional relationships.",
+            severity: 4
+          }
+        ]} />
+      </div>
+    </MarketingShell>
   )
 }
