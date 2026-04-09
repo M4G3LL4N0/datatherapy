@@ -5,8 +5,72 @@ export default function Product() {
     <MarketingShell
       title="DataTherapy Briefs"
       subtitle="Transform uncertainty into structured understanding"
-      description="Our briefs analyze your concerns, news, or questions to provide clear severity assessments, grounding context, and structured action steps."
+      description="Our AI-powered technology analyzes complex situations to deliver clarity and actionable recommendations instantly."
       tag="DataTherapy • Product"
-    />
+    >
+      <div className="mt-12 rounded-xl border border-white/15 p-6 bg-gradient-to-b from-white/5 to-white/[0.01]">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          <div>
+            <h3 className="text-xl font-semibold">Purpose-Built For</h3>
+            <ul className="mt-4 space-y-3 text-sm">
+              <li className="flex items-center gap-3">
+                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/10 text-xs">1</span>
+                <span>Enterprise Risk Teams</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/10 text-xs">2</span>
+                <span>Government Analysts</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/10 text-xs">3</span>
+                <span>Decision Makers</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold">Key Benefits</h3>
+            <ul className="mt-4 space-y-3 text-sm">
+              <li className="flex items-center gap-3">
+                <span className="text-blue-400">✓</span>
+                <span>Reduce analysis time by 80%</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="text-blue-400">✓</span>
+                <span>Standardized severity scoring</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="text-blue-400">✓</span>
+                <span>Enterprise-grade security</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="mt-8 flex justify-center">
+          <button className="rounded-full bg-white px-6 py-3 text-sm font-medium text-black hover:bg-white/90 transition-colors">
+            Request Enterprise Demo
+          </button>
+        </div>
+      </div>
+
+      <div className="mt-16">
+        <h3 className="text-xl font-semibold">See It In Action</h3>
+        <div className="mt-8 flex overflow-x-auto pb-4 -mx-6 px-6">
+          <div className="flex space-x-4 snap-x snap-mandatory">
+            <div className="w-[300px] flex-shrink-0 snap-start rounded-lg border border-white/15 p-6">
+              <h4 className="font-medium">Crisis Analysis</h4>
+              <p className="mt-2 text-sm text-white/80">Real-time geopolitical event breakdown with impact assessment</p>
+            </div>
+            <div className="w-[300px] flex-shrink-0 snap-start rounded-lg border border-white/15 p-6">
+              <h4 className="font-medium">Market Shifts</h4>
+              <p className="mt-2 text-sm text-white/80">Structured analysis of emerging market trends</p>
+            </div>
+            <div className="w-[300px] flex-shrink-0 snap-start rounded-lg border border-white/15 p-6">
+              <h4 className="font-medium">Organizational Risk</h4>
+              <p className="mt-2 text-sm text-white/80">Internal risk factors with mitigation strategies</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </MarketingShell>
   )
 }
