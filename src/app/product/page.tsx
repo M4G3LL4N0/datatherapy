@@ -59,15 +59,69 @@ export default function Product() {
             <div className="w-[300px] flex-shrink-0 snap-start rounded-lg border border-white/15 p-6">
               <h4 className="font-medium">Crisis Analysis</h4>
               <p className="mt-2 text-sm text-white/80">Real-time geopolitical event breakdown with impact assessment</p>
+              <div className="mt-4 text-xs text-white/50">
+                <span className="font-medium">Key Features:</span>
+                <ul className="mt-1 space-y-1">
+                  <li>• Real-time event tracking</li>
+                  <li>• Impact probability scoring</li>
+                  <li>• Stakeholder analysis</li>
+                </ul>
+              </div>
             </div>
             <div className="w-[300px] flex-shrink-0 snap-start rounded-lg border border-white/15 p-6">
               <h4 className="font-medium">Market Shifts</h4>
               <p className="mt-2 text-sm text-white/80">Structured analysis of emerging market trends</p>
+              <div className="mt-4 text-xs text-white/50">
+                <span className="font-medium">Key Features:</span>
+                <ul className="mt-1 space-y-1">
+                  <li>• Trend identification</li>
+                  <li>• Market impact forecasting</li>
+                  <li>• Competitive analysis</li>
+                </ul>
+              </div>
             </div>
             <div className="w-[300px] flex-shrink-0 snap-start rounded-lg border border-white/15 p-6">
               <h4 className="font-medium">Organizational Risk</h4>
               <p className="mt-2 text-sm text-white/80">Internal risk factors with mitigation strategies</p>
+              <div className="mt-4 text-xs text-white/50">
+                <span className="font-medium">Key Features:</span>
+                <ul className="mt-1 space-y-1">
+                  <li>• Risk factor identification</li>
+                  <li>• Mitigation planning</li>
+                  <li>• Scenario modeling</li>
+                </ul>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-16 border-t border-white/15 pt-12">
+        <h3 className="text-xl font-semibold">Technical Specifications</h3>
+        <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div className="rounded-lg border border-white/15 p-6">
+            <h4 className="font-medium">AI Architecture</h4>
+            <ul className="mt-2 space-y-2 text-sm text-white/80">
+              <li>• Multi-model ensemble</li>
+              <li>• Real-time data processing</li>
+              <li>• Contextual understanding</li>
+            </ul>
+          </div>
+          <div className="rounded-lg border border-white/15 p-6">
+            <h4 className="font-medium">Security</h4>
+            <ul className="mt-2 space-y-2 text-sm text-white/80">
+              <li>• SOC 2 Type II certified</li>
+              <li>• End-to-end encryption</li>
+              <li>• Role-based access control</li>
+            </ul>
+          </div>
+          <div className="rounded-lg border border-white/15 p-6">
+            <h4 className="font-medium">Performance</h4>
+            <ul className="mt-2 space-y-2 text-sm text-white/80">
+              <li>• 99.9% uptime SLA</li>
+              <li>• Sub-second response times</li>
+              <li>• Scalable infrastructure</li>
+            </ul>
           </div>
         </div>
       </div>

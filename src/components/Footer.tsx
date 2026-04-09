@@ -16,6 +16,15 @@ export function Footer() {
             <Link href="/app" className="text-sm text-white/70 hover:text-white">
               Try Now
             </Link>
+            <Link href="/technology" className="text-sm text-white/70 hover:text-white">
+              Technology
+            </Link>
+            <Link href="/integrations" className="text-sm text-white/70 hover:text-white">
+              Integrations
+            </Link>
+            <Link href="/roadmap" className="text-sm text-white/70 hover:text-white">
+              Roadmap
+            </Link>
           </div>
           <div className="flex flex-col gap-4">
             <h3 className="text-sm font-semibold">Company</h3>
