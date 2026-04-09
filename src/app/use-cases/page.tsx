@@ -146,6 +146,53 @@ export default function UseCases() {
           </div>
         </div>
       </div>
+
+      <div className="mt-16 border-t border-white/15 pt-12">
+        <h3 className="text-xl font-semibold">How It Works</h3>
+        <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div className="flex flex-col items-center text-center">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-sm font-medium">
+              1
+            </div>
+            <h4 className="mt-4 font-medium">Data Ingestion</h4>
+            <p className="mt-2 text-sm text-white/80">Collect and process structured and unstructured data</p>
+          </div>
+          <div className="flex flex-col items-center text-center">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-sm font-medium">
+              2
+            </div>
+            <h4 className="mt-4 font-medium">AI Analysis</h4>
+            <p className="mt-2 text-sm text-white/80">Apply multi-model AI for contextual understanding</p>
+          </div>
+          <div className="flex flex-col items-center text-center">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-sm font-medium">
+              3
+            </div>
+            <h4 className="mt-4 font-medium">Insight Delivery</h4>
+            <p className="mt-2 text-sm text-white/80">Generate structured briefs with actionable insights</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-16 border-t border-white/15 pt-12">
+        <h3 className="text-xl font-semibold">Customer Success Stories</h3>
+        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+          <div className="rounded-lg border border-white/15 p-6">
+            <h4 className="font-medium">Global Bank</h4>
+            <p className="mt-2 text-sm text-white/80">
+              "The AI architecture has transformed how we process complex financial data."
+            </p>
+            <div className="mt-4 text-xs text-blue-400">Read Case Study →</div>
+          </div>
+          <div className="rounded-lg border border-white/15 p-6">
+            <h4 className="font-medium">Healthcare Network</h4>
+            <p className="mt-2 text-sm text-white/80">
+              "The contextual understanding engine has improved our decision-making process."
+            </p>
+            <div className="mt-4 text-xs text-blue-400">Read Case Study →</div>
+          </div>
+        </div>
+      </div>
     </MarketingShell>
   )
 }
