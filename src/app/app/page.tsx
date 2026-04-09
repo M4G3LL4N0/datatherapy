@@ -69,6 +69,42 @@ export default function AppPage() {
           }
         ]} />
       </div>
+
+      <div className="mt-12 border-t border-white/15 pt-12">
+        <h3 className="text-lg font-semibold">Trusted by Industry Leaders</h3>
+        <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-4">
+          <div className="flex items-center justify-center opacity-70">
+            <span className="text-sm font-medium">Fortune 100</span>
+          </div>
+          <div className="flex items-center justify-center opacity-70">
+            <span className="text-sm font-medium">Government</span>
+          </div>
+          <div className="flex items-center justify-center opacity-70">
+            <span className="text-sm font-medium">Global 2000</span>
+          </div>
+          <div className="flex items-center justify-center opacity-70">
+            <span className="text-sm font-medium">Healthcare</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-12 border-t border-white/15 pt-12">
+        <h3 className="text-lg font-semibold">What Our Customers Say</h3>
+        <div className="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2">
+          <div className="rounded-lg border border-white/15 p-6">
+            <p className="text-sm text-white/80">
+              "DataTherapy has transformed how we handle complex situations. The structured briefs provide clarity when we need it most."
+            </p>
+            <div className="mt-4 text-sm font-medium">- Fortune 500 Executive</div>
+          </div>
+          <div className="rounded-lg border border-white/15 p-6">
+            <p className="text-sm text-white/80">
+              "The severity scoring and action steps have become essential tools for our decision-making process."
+            </p>
+            <div className="mt-4 text-sm font-medium">- Government Agency Director</div>
+          </div>
+        </div>
+      </div>
     </MarketingShell>
   )
 }
