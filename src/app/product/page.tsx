@@ -158,3 +158,227 @@ src/app/product/page.tsx
     </MarketingShell>
   )
 }
+import { MarketingShell } from '@/components/MarketingShell'
+import { StructuredBrief } from '@/components/StructuredBrief'
+
+const demoBriefSections = [
+  {
+    title: "Threat Pattern Detected",
+    items: [
+      {
+        type: "threat",
+        content: "Emerging financial sector anxiety pattern detected across 3 data streams",
+        severity: 7,
+        timeframe: "immediate",
+        mediaImpact: 6,
+        cognitiveLoad: 8,
+        recurrencePattern: "Quarterly earnings season + regulatory uncertainty",
+        sources: [
+          {
+            name: "Market Pulse AI",
+            reliability: "high",
+            timestamp: "Updated 15m ago"
+          },
+          {
+            name: "Regulatory Watch",
+            url: "#",
+            reliability: "high"
+          }
+        ],
+        metadata: {
+          firstObserved: "2023-Q3",
+          lastObserved: "2024-Q1",
+          peakIntensity: 7,
+          relatedPatterns: ["Earnings volatility", "Regulatory scrutiny"]
+        }
+      }
+    ]
+  },
+  {
+    title: "Impact Projections",
+    items: [
+      {
+        type: "insight",
+        content: "Predicted organizational impact:\n- 5-8 day operational disruption\n- 12-15 affected firms in sector\n- Key vulnerability: Compliance teams",
+        severity: 6,
+        cognitiveLoad: 7,
+        metadata: {
+          analysisFramework: "DT-ImpactMatrix v3.2"
+        }
+      }
+    ]
+  },
+  {
+    title: "Recommended Response",
+    items: [
+      {
+        type: "action",
+        content: "Activate Tier 2 Financial Sector Protocol",
+        priority: "high",
+        url: "/response-framework/immediate",
+        status: "pending"
+      },
+      {
+        type: "protection",
+        content: "Deploy compliance team support package",
+        timeframe: "short-term"
+      }
+    ]
+  }
+]
+
+const valueProps = [
+  {
+    icon: "⏱️",
+    title: "80% Faster Analysis",
+    description: "Reduce threat assessment time from days to hours"
+  },
+  {
+    icon: "📊",
+    title: "Pattern Library",
+    description: "200+ pre-mapped threat signatures across industries"
+  },
+  {
+    icon: "🔄",
+    title: "Recurrence Tracking",
+    description: "Monitor cyclical threat patterns over time"
+  },
+  {
+    icon: "🧩",
+    title: "Custom Frameworks",
+    description: "Tailor response protocols to your organization"
+  }
+]
+
+export default function Product() {
+  return (
+    <MarketingShell
+      title="Systematic Threat Clarity"
+      subtitle="From anxiety to action in three phases"
+      description="DataTherapy transforms organizational stress patterns into structured response frameworks, combining AI analysis with human expertise."
+      tag="DataTherapy • Product"
+    >
+      <div className="space-y-16">
+        {/* Interactive Demo Section */}
+        <section>
+          <h2 className="text-2xl font-semibold">Live Threat Brief Example</h2>
+          <p className="mt-2 text-white/70">
+            See how DataTherapy structures complex threat information
+          </p>
+          <div className="mt-6 rounded-xl border border-white/15 bg-gradient-to-b from-[#0a0a0a] to-[#0a0a0a]/50 p-1 shadow-[0_0_30px_rgba(255,255,255,0.03)]">
+            <StructuredBrief sections={demoBriefSections} />
+          </div>
+        </section>
+
+        {/* Value Propositions */}
+        <section>
+          <h2 className="text-2xl font-semibold">Why DataTherapy Works</h2>
+          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {valueProps.map((prop, i) => (
+              <div key={i} className="rounded-lg border border-white/15 p-6 hover:bg-white/5 transition-colors">
+                <div className="text-2xl">{prop.icon}</div>
+                <h3 className="mt-3 font-medium">{prop.title}</h3>
+                <p className="mt-2 text-sm text-white/70">{prop.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Methodology Diagram */}
+        <section className="rounded-lg border border-white/15 bg-[#0a0a0a] p-8">
+          <h2 className="text-2xl font-semibold">The DataTherapy Process</h2>
+          <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3">
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-red-500/20 text-sm font-medium text-red-400">
+                  1
+                </div>
+                <h3 className="font-medium">Identify Patterns</h3>
+              </div>
+              <ul className="space-y-2 text-sm text-white/80">
+                <li className="flex items-start gap-2">
+                  <span className="mt-0.5 h-1.5 w-1.5 rounded-full bg-red-500"></span>
+                  <span>Media signal tracking</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-0.5 h-1.5 w-1.5 rounded-full bg-red-500"></span>
+                  <span>Internal comms analysis</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-0.5 h-1.5 w-1.5 rounded-full bg-red-500"></span>
+                  <span>Market data correlation</span>
+                </li>
+              </ul>
+            </div>
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-yellow-500/20 text-sm font-medium text-yellow-400">
+                  2
+                </div>
+                <h3 className="font-medium">Assess Impact</h3>
+              </div>
+              <ul className="space-y-2 text-sm text-white/80">
+                <li className="flex items-start gap-2">
+                  <span className="mt-0.5 h-1.5 w-1.5 rounded-full bg-yellow-500"></span>
+                  <span>Financial exposure</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-0.5 h-1.5 w-1.5 rounded-full bg-yellow-500"></span>
+                  <span>Operational risk</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-0.5 h-1.5 w-1.5 rounded-full bg-yellow-500"></span>
+                  <span>Cognitive load analysis</span>
+                </li>
+              </ul>
+            </div>
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-green-500/20 text-sm font-medium text-green-400">
+                  3
+                </div>
+                <h3 className="font-medium">Structured Response</h3>
+              </div>
+              <ul className="space-y-2 text-sm text-white/80">
+                <li className="flex items-start gap-2">
+                  <span className="mt-0.5 h-1.5 w-1.5 rounded-full bg-green-500"></span>
+                  <span>Time-bound protocols</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-0.5 h-1.5 w-1.5 rounded-full bg-green-500"></span>
+                  <span>Department-specific guidance</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-0.5 h-1.5 w-1.5 rounded-full bg-green-500"></span>
+                  <span>Recurrence prevention</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="text-center">
+          <h2 className="text-2xl font-semibold">Ready for Systematic Clarity?</h2>
+          <p className="mt-3 text-white/70">
+            See how DataTherapy can transform your organization's threat response
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <Link
+              href="/app"
+              className="rounded-full bg-white px-6 py-3 text-sm font-medium text-black hover:bg-white/90 transition-colors"
+            >
+              Try Live Demo
+            </Link>
+            <Link
+              href="/contact"
+              className="rounded-full bg-white/10 px-6 py-3 text-sm font-medium hover:bg-white/20 transition-colors"
+            >
+              Request Consultation
+            </Link>
+          </div>
+        </section>
+      </div>
+    </MarketingShell>
+  )
+}
