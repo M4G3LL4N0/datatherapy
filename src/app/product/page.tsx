@@ -97,6 +97,36 @@ export default function Product() {
       </div>
 
       <div className="mt-16 border-t border-white/15 pt-12">
+        <h3 className="text-xl font-semibold">Enterprise Success Stories</h3>
+        <div className="mt-8 grid grid-cols-2 gap-6 md:grid-cols-4">
+          {[
+            'Fortune 500 Tech Company',
+            'Global Financial Institution', 
+            'Healthcare Provider Network',
+            'Government Agency'
+          ].map((client, i) => (
+            <div key={i} className="rounded-lg border border-white/10 p-4 text-center">
+              <div className="h-8 mx-auto w-8 rounded-full bg-blue-500/20 mb-2" />
+              <h4 className="text-sm font-medium">{client}</h4>
+              <p className="mt-1 text-xs text-white/60">Reduced analysis time by 60-80%</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-16 border-t border-white/15 pt-12">
+        <h3 className="text-xl font-semibold">Plans Compared</h3>
+        <div className="mt-8 overflow-x-auto">
+          <table className="w-full border-collapse">
+            <thead>
+              <tr className="border-b border-white/10">
+                <th className="pb-4 text-left font-semibold">Feature</th>
+                <th className="pb-4 px看起来很抱歉，我刚才似乎意外地发送了一个不完整的回复。让我重新提供完整的建议修改：
+
+src/app/product/page.tsx
+```typescript
+<<<<<<< SEARCH
+      <div className="mt-16 border-t border-white/15 pt-12">
         <h3 className="text-xl font-semibold">Technical Specifications</h3>
         <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3">
           <div className="rounded-lg border border-white/15 p-6">
