@@ -34,6 +34,19 @@ export function Header() {
             </div>
           </div>
           <div className="relative group">
+            <Link href="/interpretation-guide" className="hover:text-white/80">
+              Interpret
+            </Link>
+            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 hidden group-hover:block bg-[#0a0a0a] border border-white/15 rounded-lg p-2 w-56">
+              <Link href="/interpretation-guide" className="block px-3 py-2 text-sm hover:bg-white/5">
+                Framework Guide
+              </Link>
+              <Link href="/sample-brief" className="block px-3 py-2 text-sm hover:bg-white/5">
+                Sample Analyses
+              </Link>
+            </div>
+          </div>
+          <div className="relative group">
             <Link href="/threat-assessment" className="hover:text-white/80">
               Assess
             </Link>
