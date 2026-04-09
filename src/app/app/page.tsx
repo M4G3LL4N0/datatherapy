@@ -1,110 +1,46 @@
-import { MarketingShell } from '@/components/MarketingShell'
-import { StructuredBrief } from '@/components/StructuredBrief'
+'use client'
 
-export default function ApplicationPage() {
+import { MarketingShell } from '@/components/MarketingShell'
+import { useSession } from 'next-auth/react'
+import { redirect } from 'next/navigation'
+
+export default function AppPage() {
+  const { data: session, status } = useSession()
+
+  if (status === 'unauthenticated') {
+    redirect('/')
+  }
+
   return (
     <MarketingShell
-      title="DataTherapy Brief"
-      subtitle="Transform uncertainty into clarity"
-      description="Enter your concern or question to receive a structured DataTherapy Brief with severity assessment, grounding context, and action steps."
+      title="Your Dashboard"
+      subtitle="Premium DataTherapy Experience"
+      description="Access your saved briefs, analytics, and premium tools."
       tag="DataTherapy • App"
     >
-      <form className="mt-8 space-y-4">
-        <div>
-          <label htmlFor="concern" className="block text-sm font-medium text-white/80">
-            What's concerning you?
-          </label>
-          <textarea
-            id="concern"
-            name="concern"
-            rows={4}
-            className="mt-1 w-full rounded-lg border border-white/15 bg-white/5 p-3 text-sm text-white focus:border-white/30 focus:outline-none focus:ring-1 focus:ring-white/30"
-            placeholder="E.g. 'I'm worried about job security due to the economic downturn...'"
-            required
-          />
-        </div>
-        <div className="flex items-center justify-between">
-          <div className="flex items-center">
-            <input
-              id="urgent"
-              name="urgent"
-              type="checkbox"
-              className="h-4 w-4 rounded border-white/15 bg-white/5 text-blue-600 focus:ring-blue-500"
-            />
-            <label htmlFor="urgent" className="ml-2 block text-sm text-white/80">
-              This is urgent
-            </label>
-          </div>
-          <button
-            type="submit"
-            className="rounded-full bg-white/10 px-6 py-2 text-sm font-medium text-white hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/30"
-          >
-            Generate Brief
-          </button>
-        </div>
-      </form>
-
-      <div className="mt-12 border-t border-white/15 pt-12">
-        <h3 className="text-lg font-semibold">Example Brief</h3>
-        <p className="mt-1 text-sm text-white/60">This demonstrates what your personalized brief will look like</p>
-        <StructuredBrief sections={[
-          {
-            title: "Current Situation",
-            content: "You're feeling overwhelmed by recent news about economic uncertainty and potential layoffs.",
-            severity: 8
-          },
-          {
-            title: "Key Facts",
-            content: "The current economic indicators show a 30% chance of recession. Your company has stable cash reserves but is implementing cost-cutting measures."
-          },
-          {
-            title: "Recommended Actions",
-            content: "1. Review your emergency fund\n2. Update your resume\n3. Schedule a career development discussion with your manager",
-            severity: 6
-          },
-          {
-            title: "Long-term Perspective",
-            content: "Economic cycles are normal. Focus on building transferable skills and maintaining professional relationships.",
-            severity: 4
-          }
-        ]} />
+      <div className="mt-8 rounded-xl border border-white/15 p-6 bg-gradient-to-b from-white/5 to-white/[0.01]">
+        <h3 className="text-xl font-semibold">Premium Features</h3>
+        <ul className="mt-4 space-y-4 text-sm">
+          <li className="flex items-center gap-3">
+            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-blue-500/20 text-blue-400 text-xs">✓</span>
+            <span>Saved Brief History</span>
+          </li>
+          <li className="flex items-center gap-3">
+            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-blue-500/20 text-blue-400 text-xs">✓</span>
+            <span>Priority Processing</span>
+          </li>
+          <li className="flex items-center gap-3">
+            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-blue-500/20 text-blue-400 text-xs">✓</span>
+            <span>Advanced Analytics</span>
+          </li>
+        </ul>
       </div>
 
-      <div className="mt-12 border-t border-white/15 pt-12">
-        <h3 className="text-lg font-semibold">Trusted by Industry Leaders</h3>
-        <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-4">
-          <div className="flex items-center justify-center opacity-70">
-            <span className="text-sm font-medium">Fortune 100</span>
-          </div>
-          <div className="flex items-center justify-center opacity-70">
-            <span className="text-sm font-medium">Government</span>
-          </div>
-          <div className="flex items-center justify-center opacity-70">
-            <span className="text-sm font-medium">Global 2000</span>
-          </div>
-          <div className="flex items-center justify-center opacity-70">
-            <span className="text-sm font-medium">Healthcare</span>
-          </div>
+      {status === 'authenticated' && (
+        <div className="mt-8">
+          <p className="text-sm text-white/80">Welcome back, {session.user?.name}</p>
         </div>
-      </div>
-
-      <div className="mt-12 border-t border-white/15 pt-12">
-        <h3 className="text-lg font-semibold">What Our Customers Say</h3>
-        <div className="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2">
-          <div className="rounded-lg border border-white/15 p-6">
-            <p className="text-sm text-white/80">
-              "DataTherapy has transformed how we handle complex situations. The structured briefs provide clarity when we need it most."
-            </p>
-            <div className="mt-4 text-sm font-medium">- Fortune 500 Executive</div>
-          </div>
-          <div className="rounded-lg border border-white/15 p-6">
-            <p className="text-sm text-white/80">
-              "The severity scoring and action steps have become essential tools for our decision-making process."
-            </p>
-            <div className="mt-4 text-sm font-medium">- Government Agency Director</div>
-          </div>
-        </div>
-      </div>
+      )}
     </MarketingShell>
   )
 }
