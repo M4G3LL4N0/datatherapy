@@ -183,8 +183,22 @@ export function StructuredBrief({ sections }: { sections: BriefSection[] }) {
                 )}
                 {item.metadata && (
                   <div className="mt-3">
-                    <div className="text-xs text-white/60 mb-2">Pattern Metadata</div>
-                    <div className="grid grid-cols-2 gap-2 text-xs text-white/70">
+                    <div className="text-xs text-white/60 mb-2">Pattern Analysis</div>
+                    <div className="grid grid-cols-2 gap-3 text-xs text-white/70">
+                      {item.metadata.peakIntensity && (
+                        <div className="col-span-2">
+                          <div className="flex items-center justify-between mb-1">
+                            <span className="text-white/50">Pattern Intensity</span>
+                            <span>{item.metadata.peakIntensity}/10</span>
+                          </div>
+                          <div className="h-1.5 w-full rounded-full bg-white/10">
+                            <div
+                              className="h-1.5 rounded-full bg-gradient-to-r from-red-500 to-yellow-500"
+                              style={{ width: `${item.metadata.peakIntensity * 10}%` }}
+                            />
+                          </div>
+                        </div>
+                      )}
                       {item.metadata.firstObserved && (
                         <div>
                           <span className="text-white/50">First Observed:</span> {item.metadata.firstObserved}

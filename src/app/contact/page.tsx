@@ -9,9 +9,15 @@ export default function Contact() {
       tag="DataTherapy • Contact Us"
     >
       <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
-        <div className="rounded-lg border border-white/15 p-6">
-          <h3 className="text-lg font-semibold">Contact Options</h3>
+        <div className="rounded-lg border border-white/15 p-6 hover:bg-white/5 transition-colors">
+          <h3 className="text-lg font-semibold">Threat Response</h3>
           <ul className="mt-4 space-y-4 text-sm">
+            <li className="flex items-center gap-3">
+              <span className="text-red-400">⚠️</span>
+              <a href="mailto:urgent@datatherapy.ai" className="hover:underline">
+                Immediate Threat Support
+              </a>
+            </li>
             <li className="flex items-center gap-3">
               <span className="text-blue-400">✉️</span>
               <a href="mailto:hello@datatherapy.ai" className="hover:underline">
