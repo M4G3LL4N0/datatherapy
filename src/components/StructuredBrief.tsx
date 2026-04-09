@@ -183,7 +183,7 @@ export function StructuredBrief({ sections }: { sections: BriefSection[] }) {
                 )}
                 {item.metadata && (
                   <div className="mt-3">
-                    <div className="text-xs text-white/60 mb-2">Pattern Analysis</div>
+                    <div className="text-xs text-white/60 mb-2">Analysis Details</div>
                     <div className="grid grid-cols-2 gap-3 text-xs text-white/70">
                       {item.metadata.peakIntensity && (
                         <div className="col-span-2">
