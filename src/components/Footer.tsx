@@ -40,14 +40,14 @@ export function Footer() {
           </div>
           <div className="flex flex-col gap-4">
             <h3 className="text-sm font-semibold">Clarity Tools</h3>
-            <Link href="/use-cases" className="text-sm text-white/70 hover:text-white">
-              Decision Frameworks
+            <Link href="/fear-index" className="text-sm text-white/70 hover:text-white">
+              Current Threat Index
             </Link>
-            <Link href="/technology" className="text-sm text-white/70 hover:text-white">
-              Cognitive Mapping
+            <Link href="/protection-patterns" className="text-sm text-white/70 hover:text-white">
+              Protection Frameworks
             </Link>
-            <Link href="/sample-brief" className="text-sm text-white/70 hover:text-white">
-              Anxiety Reduction
+            <Link href="/media-amplification" className="text-sm text-white/70 hover:text-white">
+              Media Influence Analysis 
             </Link>
             <Link href="/technology" className="text-sm text-white/70 hover:text-white">
               Technology

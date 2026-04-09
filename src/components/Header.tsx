@@ -13,11 +13,11 @@ export function Header() {
           </span>
         </div>
         <div className="flex items-center gap-5 text-sm font-medium">
-          <Link href="/product" className="hover:text-white/80">
-            Clarity Tools
+          <Link href="/threat-patterns" className="hover:text-white/80">
+            Threat Patterns
           </Link>
-          <Link href="/use-cases" className="hover:text-white/80">
-            Decision Frameworks
+          <Link href="/amplification-cycles" className="hover:text-white/80">
+            Media Cycles
           </Link>
           <Link href="/pricing" className="hover:text-white/80">
             Pricing

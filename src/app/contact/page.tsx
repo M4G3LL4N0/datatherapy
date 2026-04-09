@@ -3,9 +3,9 @@ import { MarketingShell } from '@/components/MarketingShell'
 export default function Contact() {
   return (
     <MarketingShell
-      title="Find Clarity"
-      subtitle="Transform uncertainty into understanding"
-      description="Whether you're facing complex decisions or seeking clarity in uncertain times, our team is here to help you navigate through the noise."
+      title="Fear Response Protocol"
+      subtitle="Systematize your defense against recurring threats"
+      description="Our threat pattern analysts specialize in decoding media-amplified risks and building durable protection frameworks against the most persistent fear categories."
       tag="DataTherapy • Contact Us"
     >
       <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
