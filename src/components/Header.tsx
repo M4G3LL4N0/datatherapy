@@ -19,9 +19,9 @@ export function Header() {
             </Link>
             <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 hidden group-hover:block bg-[#0a0a0a] border border-white/15 rounded-lg p-2 w-56">
               <div className="px-3 py-2 text-xs text-white/50">Detection Tools:</div>
-              <Link href="/threat-patterns" className="flex items-center gap-2 px-3 py-2 text-sm hover:bg-white/5">
+              <Link href="/fear-categories" className="flex items-center gap-2 px-3 py-2 text-sm hover:bg-white/5">
                 <span className="w-2 h-2 rounded-full bg-red-500"></span>
-                Pattern Recognition
+                Fear Pattern Library
               </Link>
               <Link href="/media-analysis" className="flex items-center gap-2 px-3 py-2 text-sm hover:bg-white/5">
                 <span className="w-2 h-2 rounded-full bg-purple-500"></span>
