@@ -248,6 +248,6 @@ function StructuredBriefComponent({ brief, data }: { brief?: StructuredBriefData
   )
 }
 
+export { StructuredBriefComponent as StructuredBrief }
 export default StructuredBriefComponent
-export { StructuredBriefComponent as StructuredBrief, StructuredBriefComponent }
 export type { BriefSection, BriefItem, StructuredBriefData }
