@@ -58,3 +58,24 @@ export const fearCategories: FearCategory[] = [
     mechanisms: ["imagined future ruin", "loss of control", "helplessness", "reality confusion"]
   }
 ]
+export interface FearCategory {
+  slug: string
+  title: string
+  description: string
+  mechanisms: string[]
+}
+
+export const fearCategories: FearCategory[] = [
+  {
+    slug: 'financial',
+    title: 'Financial Fears',
+    description: 'Anxieties around money, markets, and economic stability',
+    mechanisms: ['Loss aversion', 'Scarcity mindset', 'Uncertainty']
+  },
+  {
+    slug: 'technological',
+    title: 'Technological Fears',
+    description: 'Concerns about AI, automation, and technological change',
+    mechanisms: ['Obsolescence', 'Unintended consequences', 'Loss of control']
+  }
+]

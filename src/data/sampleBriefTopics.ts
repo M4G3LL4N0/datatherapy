@@ -132,3 +132,31 @@ export const sampleBriefTopics: SampleBriefTopic[] = seeds.map((seed) => ({
     tone: seed.recommendedTone
   })
 }))
+export interface SampleBriefTopic {
+  id: string
+  title: string
+  shortDescription: string
+  category: string
+  fearPillar?: string
+  featured?: boolean
+  brief?: any
+}
+
+export const sampleBriefTopics: SampleBriefTopic[] = [
+  {
+    id: '1',
+    title: 'Market Panic Example',
+    shortDescription: 'Analyzing sudden stock market drops',
+    category: 'Financial Fears',
+    featured: true,
+    brief: {}
+  },
+  {
+    id: '2',
+    title: 'AI Replacement Concerns',
+    shortDescription: 'Understanding automation anxiety',
+    category: 'Technological Fears',
+    featured: true,
+    brief: {}
+  }
+]
