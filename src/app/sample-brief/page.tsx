@@ -1,7 +1,7 @@
 import { sampleBriefTopics } from "@/data/sampleBriefTopics"
 import { MarketingShell } from "@/components/MarketingShell"
 
-export default function SampleBriefPage() {
+export default async function SampleBriefPage() {
   const featured = sampleBriefTopics.filter((item) => item.featured).slice(0, 6)
 
   return (
