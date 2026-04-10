@@ -1,5 +1,5 @@
-import { MarketingShell } from "@/components/MarketingShell"
 import { sampleBriefTopics } from "@/data/sampleBriefTopics"
+import { MarketingShell } from "@/components/MarketingShell"
 
 
 export default async function SampleBriefPage() {
