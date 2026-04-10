@@ -10,9 +10,6 @@
 Error: Turbopack build failed with 5 errors:
 ./src/app/product/page.tsx:129:51
 Expected '</', got 'numeric literal'
-  [90m127 |[0m [32m``[0m[32m`typescript[0m
-  [90m128 |[0m [32m<<<<<<< SEARCH[0m
-[31m[1m>[0m [90m129 |[0m [32m      <div className="mt-16 border-t border-white/15 pt-12">[0m
   [90m    |[0m                                                   [31m[1m^^[0m
   [90m130 |[0m [32m        <h3 className="text-xl font-semibold">Technical Specifications</h3>[0m
   [90m131 |[0m [32m        <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3">[0m
