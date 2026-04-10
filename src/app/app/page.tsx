@@ -6,6 +6,7 @@ import Link from "next/link"
 import { MarketingShell } from "@/components/MarketingShell"
 import { StructuredBrief } from "@/components/StructuredBrief"
 import { sampleBriefTopics } from "@/data/sampleBriefTopics"
+import type { StructuredBriefData } from "@/components/StructuredBrief"
 import { generateDataTherapyBrief } from "@/lib/generateDataTherapyBrief"
 
 const categories = [
@@ -26,13 +27,9 @@ export default function AppPage() {
   const [input, setInput] = useState(featuredSamples[0]?.inputText ?? "")
   const [category, setCategory] = useState<string>(featuredSamples[0]?.category ?? categories[0])
   const [tone, setTone] = useState<string>(featuredSamples[0]?.recommendedTone ?? tones[0])
-  const [result, setResult] = useState(() =>
-    generateDataTherapyBrief({
-      input,
-      category,
-      tone
-    })
-  )
+  const [result, setResult] = useState<StructuredBriefData>({
+    sections: []
+  })
 
   function runBrief() {
     setResult(

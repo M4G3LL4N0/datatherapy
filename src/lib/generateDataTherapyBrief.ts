@@ -188,3 +188,26 @@ export function generateDataTherapyBrief({
     confidenceNote
   }
 }
+import type { StructuredBriefData } from "@/components/StructuredBrief"
+
+export function generateDataTherapyBrief({
+  input,
+  category,
+  tone
+}: {
+  input: string
+  category: string
+  tone: string
+}): StructuredBriefData {
+  // TODO: Implement actual brief generation logic
+  return {
+    sections: [
+      {
+        title: "Sample Brief",
+        content: "This is a placeholder brief. The actual brief generation logic will be implemented here.",
+        severity: 1,
+        confidence: 0.8
+      }
+    ]
+  }
+}
