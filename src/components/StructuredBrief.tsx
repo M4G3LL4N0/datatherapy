@@ -46,7 +46,7 @@ export interface StructuredBriefData {
   sections: BriefSection[]
 }
 
-export function StructuredBrief({ brief, data }: { brief?: StructuredBriefData; data?: StructuredBriefData }) {
+function StructuredBriefComponent({ brief, data }: { brief?: StructuredBriefData; data?: StructuredBriefData }) {
   const briefData = brief || data
   if (!briefData) return null
   const sections = briefData.sections
@@ -248,6 +248,6 @@ export function StructuredBrief({ brief, data }: { brief?: StructuredBriefData; 
   )
 }
 
-export default StructuredBrief
-export { StructuredBrief }
+export default StructuredBriefComponent
+export { StructuredBriefComponent as StructuredBrief }
 export type { BriefSection, BriefItem, StructuredBriefData }
