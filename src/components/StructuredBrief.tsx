@@ -246,5 +246,6 @@ export function StructuredBrief({ brief }: { brief: StructuredBriefData }) {
   )
 }
 
+export default StructuredBrief
 export { StructuredBrief }
 export type { BriefSection, BriefItem, StructuredBriefData }
