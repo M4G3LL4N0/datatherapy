@@ -64,7 +64,7 @@ const specs = [
   }
 ]
 
-export default async function ProductPage() {
+export default function ProductPage() {
   return (
     <MarketingShell
       eyebrow="Product"
