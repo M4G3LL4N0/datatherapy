@@ -1,157 +1,144 @@
-'use client'
+"use client"
 
-import { MarketingShell } from '@/components/MarketingShell'
-import { StructuredBrief } from '@/components/StructuredBrief'
-import { useSession } from 'next-auth/react'
-import { redirect } from 'next/navigation'
-import { useState } from 'react'
+import type { Metadata } from "next"
+import { useMemo, useState } from "react"
+import Link from "next/link"
+import { MarketingShell } from "@/components/MarketingShell"
+import { StructuredBrief } from "@/components/StructuredBrief"
+import { sampleBriefTopics } from "@/data/sampleBriefTopics"
+import { generateDataTherapyBrief } from "@/lib/generateDataTherapyBrief"
+
+const categories = [
+  "News / World Events",
+  "Financial Fear",
+  "Health Fear",
+  "Social / Relationship Fear",
+  "Career / AI Fear",
+  "Crime / Safety Fear",
+  "General Uncertainty",
+  "Misinformation / Rumor Fear"
+] as const
+
+const tones = ["Analytical", "Grounding", "Direct"] as const
 
 export default function AppPage() {
-  const { data: session, status } = useSession()
-  const [input, setInput] = useState('')
-  const [isGenerating, setIsGenerating] = useState(false)
-  const [brief, setBrief] = useState<{
-    sections: Array<{
-      title: string
-      content: string
-      severity?: number
-    }>
-  } | null>(null)
+  const featuredSamples = useMemo(() => sampleBriefTopics.slice(0, 6), [])
+  const [input, setInput] = useState(featuredSamples[0]?.inputText ?? "")
+  const [category, setCategory] = useState<string>(featuredSamples[0]?.category ?? categories[0])
+  const [tone, setTone] = useState<string>(featuredSamples[0]?.recommendedTone ?? tones[0])
+  const [result, setResult] = useState(() =>
+    generateDataTherapyBrief({
+      input,
+      category,
+      tone
+    })
+  )
 
-  if (status === 'unauthenticated') {
-    redirect('/')
-  }
-
-  const handleGenerateBrief = (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsGenerating(true)
-    
-    // Simulate API call
-    setTimeout(() => {
-      setBrief({
-        sections: [
-          {
-            title: "Situation Analysis",
-            items: [{
-              type: 'text',
-              content: input || "The user is experiencing uncertainty about a complex situation that requires structured analysis.",
-              severity: 6
-            }]
-          },
-          {
-            title: "Key Factors", 
-            items: [{
-              type: 'list',
-              content: "Multiple variables at play\nEmotional component present\nTime-sensitive considerations",
-            }]
-          },
-          {
-            title: "Recommended Actions",
-            items: [{
-              type: 'action',
-              content: "Immediate: Break situation into smaller, manageable components",
-              severity: 5
-            },{
-              type: 'action', 
-              content: "Short-term: Prioritize actions based on highest impact",
-              severity: 4
-            },{
-              type: 'action',
-              content: "Ongoing: Establish timeline for resolution",
-              severity: 3
-            }]
-          },
-          {
-            title: "Strategic Insights",
-            items: [{
-              type: 'insight',
-              content: "This situation reflects a pattern that can be systematically addressed",
-              severity: 4
-            },{
-              type: 'insight',
-              content: "Long-term solution requires addressing underlying causes"
-            }]
-          }
-        ]
+  function runBrief() {
+    setResult(
+      generateDataTherapyBrief({
+        input,
+        category,
+        tone
       })
-      setIsGenerating(false)
-    }, 1500)
+    )
   }
 
   return (
     <MarketingShell
-      title="DataTherapy Brief"
-      subtitle="Transform uncertainty into clarity"
-      description="Enter your concern or question to receive a structured DataTherapy Brief with severity scoring and actionable insights."
-      tag="DataTherapy • App"
+      eyebrow="App"
+      title="Generate a DataTherapy Brief."
+      description="Paste a fear-triggering thought, headline, or uncertainty and turn it into a structured interpretation."
     >
-      <form onSubmit={handleGenerateBrief} className="mt-8 space-y-4">
-        <div>
-          <label htmlFor="concern" className="block text-sm font-medium text-white/80">
-            What's concerning you?
-          </label>
+      <section className="grid grid-cols-1 gap-10 lg:grid-cols-[0.95fr_1.05fr]">
+        <div className="rounded-3xl border border-white/15 bg-white/5 p-6">
+          <label className="block text-sm text-white/70">Input</label>
           <textarea
-            id="concern"
-            name="concern"
-            rows={4}
-            className="mt-1 w-full rounded-lg border border-white/15 bg-white/5 p-3 text-sm text-white focus:border-white/30 focus:outline-none focus:ring-1 focus:ring-white/30"
-            placeholder="E.g. 'I'm worried about job security due to the economic downturn...'"
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            required
+            className="mt-3 min-h-[180px] w-full rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-white outline-none"
+            placeholder="Paste a scary headline, fear, or spiraling thought..."
           />
-        </div>
-        <div className="flex items-center justify-between">
-          <div className="flex items-center">
-            <input
-              id="urgent"
-              name="urgent"
-              type="checkbox"
-              className="h-4 w-4 rounded border-white/15 bg-white/5 text-blue-600 focus:ring-blue-500"
-            />
-            <label htmlFor="urgent" className="ml-2 block text-sm text-white/80">
-              This is urgent
-            </label>
+
+          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div>
+              <label className="block text-sm text-white/70">Category</label>
+              <select
+                value={category}
+                onChange={(e) => setCategory(e.target.value)}
+                className="mt-3 w-full rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-white outline-none"
+              >
+                {categories.map((item) => (
+                  <option key={item} value={item}>
+                    {item}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-sm text-white/70">Tone</label>
+              <select
+                value={tone}
+                onChange={(e) => setTone(e.target.value)}
+                className="mt-3 w-full rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-white outline-none"
+              >
+                {tones.map((item) => (
+                  <option key={item} value={item}>
+                    {item}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
+
           <button
-            type="submit"
-            disabled={isGenerating}
-            className="rounded-full bg-white/10 px-6 py-2 text-sm font-medium text-white hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/30 disabled:opacity-50"
+            type="button"
+            onClick={runBrief}
+            className="mt-6 rounded-2xl bg-white px-6 py-3 text-sm font-medium text-black transition hover:scale-[1.02]"
           >
-            {isGenerating ? 'Generating...' : 'Generate Brief'}
+            Generate brief
           </button>
-        </div>
-      </form>
 
-      {isGenerating && (
-        <div className="mt-8 rounded-lg border border-white/15 p-6">
-          <div className="flex items-center space-x-2 text-sm text-white/80">
-            <div className="h-2 w-2 animate-pulse rounded-full bg-blue-400" />
-            <span>Analyzing your input...</span>
+          <div className="mt-8">
+            <div className="flex items-center justify-between">
+              <h2 className="text-lg font-semibold">Try a sample</h2>
+              <Link href="/app/examples" className="text-sm text-white/70 hover:text-white">
+                View examples
+              </Link>
+            </div>
+
+            <div className="mt-4 grid grid-cols-1 gap-3">
+              {featuredSamples.map((sample) => (
+                <button
+                  key={sample.id}
+                  type="button"
+                  onClick={() => {
+                    setInput(sample.inputText)
+                    setCategory(sample.category)
+                    setTone(sample.recommendedTone)
+                    setResult(
+                      generateDataTherapyBrief({
+                        input: sample.inputText,
+                        category: sample.category,
+                        tone: sample.recommendedTone
+                      })
+                    )
+                  }}
+                  className="rounded-2xl border border-white/10 bg-black/20 p-4 text-left transition hover:bg-white/10"
+                >
+                  <p className="text-sm text-white/85">{sample.title}</p>
+                  <p className="mt-2 text-xs text-white/55">{sample.shortDescription}</p>
+                </button>
+              ))}
+            </div>
           </div>
         </div>
-      )}
 
-      {brief && (
-        <div className="mt-8 border-t border-white/15 pt-8">
-          <h3 className="text-xl font-semibold">Your DataTherapy Brief</h3>
-          <StructuredBrief sections={brief.sections} />
+        <div className="rounded-3xl border border-white/15 bg-white/5 p-6">
+          <StructuredBrief brief={result} />
         </div>
-      )}
-
-      <div className="mt-12 border-t border-white/15 pt-12">
-        <h3 className="text-xl font-semibold">Recent Briefs</h3>
-        <div className="mt-4 grid grid-cols-1 gap-4">
-          <div className="rounded-lg border border-white/15 p-4 hover:bg-white/5 transition-colors">
-            <h4 className="font-medium">Career Transition Analysis</h4>
-            <p className="mt-1 text-sm text-white/80">Generated 2 days ago</p>
-          </div>
-          <div className="rounded-lg border border-white/15 p-4 hover:bg-white/5 transition-colors">
-            <h4 className="font-medium">Market Risk Assessment</h4>
-            <p className="mt-1 text-sm text-white/80">Generated 1 week ago</p>
-          </div>
-        </div>
-      </div>
+      </section>
     </MarketingShell>
   )
 }
