@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { MarketingShell } from "@/components/MarketingShell"
 import { fearCategories } from "@/data/fearCategories"
+import type { FearCategory } from "@/types/datatherapy"
 import { sampleBriefTopics } from "@/data/sampleBriefTopics"
 
 export const metadata: Metadata = {
