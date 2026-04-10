@@ -7,7 +7,6 @@ export const metadata: Metadata = {
   description: "See how DataTherapy converts scary information into structured briefs with seriousness, relevance, urgency and certainty scores."
 }
 
-
 export default async function SampleBriefPage() {
   const featured = sampleBriefTopics.filter((item) => item.featured).slice(0, 6)
 

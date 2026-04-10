@@ -3,7 +3,7 @@ import { MarketingShell } from "@/components/MarketingShell"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Product - DataTherapy",
+  title: "Product - DataTherapy", 
   description: "How DataTherapy helps users move from vague alarm to grounded understanding."
 }
 
