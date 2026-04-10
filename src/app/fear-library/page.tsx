@@ -3,7 +3,6 @@ import Link from "next/link"
 import { MarketingShell } from "@/components/MarketingShell"
 
 import { fearCategories } from "@/data/fearCategories"
-import { sampleBriefTopics } from "@/data/sampleBriefTopics" // Used for filtering below
 
 export const metadata: Metadata = {
   title: "Fear Library - DataTherapy", 
