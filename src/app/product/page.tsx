@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Product | DataTherapy",
   description:
     "Learn how DataTherapy turns scary information into structured understanding through seriousness, relevance, urgency, and certainty scoring."
-}
+} as const
 
 const modules = [
   {
@@ -64,7 +64,7 @@ const specs = [
   }
 ]
 
-export default function ProductPage() {
+export default async function ProductPage() {
   return (
     <MarketingShell
       eyebrow="Product"
