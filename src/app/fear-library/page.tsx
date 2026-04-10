@@ -53,7 +53,6 @@ export default function FearLibraryPage() {
         })}
       </section>
     </MarketingShell>
-  )
 }
   )
 }
