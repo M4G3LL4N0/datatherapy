@@ -2,6 +2,8 @@ import type { Metadata } from "next"
 import { MarketingShell } from "@/components/MarketingShell"
 import { StructuredBrief } from "@/components/StructuredBrief"
 import { sampleBriefTopics } from "@/data/sampleBriefTopics"
+import { marketDipBrief } from './sample-briefs/market-dip'
+import { geopoliticalTensionsBrief } from './sample-briefs/geopolitical-tensions'
 
 export const metadata: Metadata = {
   title: "Sample Briefs | DataTherapy",
