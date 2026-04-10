@@ -5,7 +5,7 @@ import { fearCategories } from "@/data/fearCategories"
 import { sampleBriefTopics } from "@/data/sampleBriefTopics"
 
 
-export default function FearLibraryPage() {
+export default async function FearLibraryPage() {
   return (
     <MarketingShell
       eyebrow="Fear Library"
