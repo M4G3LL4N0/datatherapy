@@ -8,7 +8,6 @@ export const metadata: Metadata = {
     "Learn how DataTherapy turns scary information into structured understanding through seriousness, relevance, urgency, and certainty scoring."
 }
 
-export default function ProductPage() {
 const modules = [
   {
     title: "DataTherapy Brief",
