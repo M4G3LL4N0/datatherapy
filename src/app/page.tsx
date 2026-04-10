@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { MarketingShell } from '@/components/MarketingShell'
 import { StructuredBrief } from '@/components/StructuredBrief'
 
