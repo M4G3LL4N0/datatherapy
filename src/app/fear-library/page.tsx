@@ -11,12 +11,6 @@ export const metadata: Metadata = {
 }
 
 export default function FearLibraryPage() {
-  title: "Fear Library | DataTherapy",
-  description:
-    "Browse recurring fear categories and structured sample briefs across world chaos, health, money, crime, AI, misinformation, relationships, and general dread."
-}
-
-export default function FearLibraryPage() {
   return (
     <MarketingShell
       eyebrow="Fear Library"

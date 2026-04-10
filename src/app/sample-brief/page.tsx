@@ -9,12 +9,6 @@ export const metadata: Metadata = {
 }
 
 export default function SampleBriefPage() {
-  title: "Sample Briefs | DataTherapy",
-  description:
-    "Explore sample DataTherapy Briefs for fear categories like market panic, AI replacement, outbreaks, war headlines, crime fears, and social overthinking."
-}
-
-export default function SampleBriefPage() {
   const featured = sampleBriefTopics.filter((item) => item.featured).slice(0, 6)
 
   return (
