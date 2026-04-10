@@ -2,6 +2,11 @@ import type { Metadata } from "next"
 import { MarketingShell } from "@/components/MarketingShell"
 import { sampleBriefTopics } from "@/data/sampleBriefTopics" // Used for filtering below
 
+export const metadata: Metadata = {
+  title: "Sample Briefs - DataTherapy",
+  description: "See how DataTherapy converts scary information into structured briefs with seriousness, relevance, urgency and certainty scores."
+}
+
 
 export default async function SampleBriefPage() {
   const featured = sampleBriefTopics.filter((item) => item.featured).slice(0, 6)
