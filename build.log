@@ -5,31 +5,95 @@
 ▲ Next.js 16.2.2 (Turbopack)
 
   Creating an optimized production build ...
-✓ Compiled successfully in 4.6s
-  Running TypeScript ...
-  Finished TypeScript in 7.7s ...
-  Collecting page data using 7 workers ...
-  Generating static pages using 7 workers (0/13) ...
-  Generating static pages using 7 workers (3/13) 
-  Generating static pages using 7 workers (6/13) 
-  Generating static pages using 7 workers (9/13) 
-✓ Generating static pages using 7 workers (13/13) in 2.1s
-  Finalizing page optimization ...
 
-Route (app)
-┌ ○ /
-├ ○ /_not-found
-├ ○ /about
-├ ○ /app
-├ ○ /brief
-├ ○ /contact
-├ ○ /investors
-├ ○ /pricing
-├ ○ /product
-├ ○ /sample-brief
-├ ○ /technology
-└ ○ /use-cases
+> Build error occurred
+Error: Turbopack build failed with 5 errors:
+./src/app/product/page.tsx:129:51
+Expected '</', got 'numeric literal'
+  [90m127 |[0m [32m``[0m[32m`typescript[0m
+  [90m128 |[0m [32m<<<<<<< SEARCH[0m
+[31m[1m>[0m [90m129 |[0m [32m      <div className="mt-16 border-t border-white/15 pt-12">[0m
+  [90m    |[0m                                                   [31m[1m^^[0m
+  [90m130 |[0m [32m        <h3 className="text-xl font-semibold">Technical Specifications</h3>[0m
+  [90m131 |[0m [32m        <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3">[0m
+  [90m132 |[0m [32m          <div className="rounded-lg border border-white/15 p-6">[0m
+
+Parsing ecmascript source code failed
 
 
-○  (Static)  prerendered as static content
+./src/app/fear-library/page.tsx:1:1
+Module not found: Can't resolve './fear-pillars/types'
+[31m[1m>[0m [90m1 |[0m [36mimport[0m { fearPillars } [36mfrom[0m [32m'./fear-pillars/types'[0m
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m [36mimport[0m { [33mMarketingShell[0m } [36mfrom[0m [32m'@/components/MarketingShell'[0m
+  [90m3 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m'next/link'[0m
+  [90m4 |[0m
 
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/sample-brief/page.tsx:4:1
+Module not found: Can't resolve './sample-briefs/geopolitical-tensions'
+  [90m2 |[0m [36mimport[0m { [33mStructuredBrief[0m } [36mfrom[0m [32m'@/components/StructuredBrief'[0m
+  [90m3 |[0m [36mimport[0m { marketDipBrief } [36mfrom[0m [32m'./sample-briefs/market-dip'[0m
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { geopoliticalTensionsBrief } [36mfrom[0m [32m'./sample-briefs/geopolitical-tensions'[0m
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m'next/link'[0m
+  [90m6 |[0m
+  [90m7 |[0m [36mconst[0m sampleBriefs = [
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/sample-brief/page.tsx:3:1
+Module not found: Can't resolve './sample-briefs/market-dip'
+  [90m1 |[0m [36mimport[0m { [33mMarketingShell[0m } [36mfrom[0m [32m'@/components/MarketingShell'[0m
+  [90m2 |[0m [36mimport[0m { [33mStructuredBrief[0m } [36mfrom[0m [32m'@/components/StructuredBrief'[0m
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { marketDipBrief } [36mfrom[0m [32m'./sample-briefs/market-dip'[0m
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { geopoliticalTensionsBrief } [36mfrom[0m [32m'./sample-briefs/geopolitical-tensions'[0m
+  [90m5 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m'next/link'[0m
+  [90m6 |[0m
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/app/page.tsx:5:1
+Module not found: Can't resolve 'next-auth/react'
+  [90m3 |[0m [36mimport[0m { [33mMarketingShell[0m } [36mfrom[0m [32m'@/components/MarketingShell'[0m
+  [90m4 |[0m [36mimport[0m { [33mStructuredBrief[0m } [36mfrom[0m [32m'@/components/StructuredBrief'[0m
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { useSession } [36mfrom[0m [32m'next-auth/react'[0m
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { redirect } [36mfrom[0m [32m'next/navigation'[0m
+  [90m7 |[0m [36mimport[0m { useState } [36mfrom[0m [32m'react'[0m
+  [90m8 |[0m
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/app/page.tsx [Client Component Browser]
+    ./src/app/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/app/page.tsx [Client Component SSR]
+    ./src/app/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (./src/app/product/page.tsx:129:51)
+    at <unknown> (./src/app/fear-library/page.tsx:1:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/sample-brief/page.tsx:4:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/sample-brief/page.tsx:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/app/page.tsx:5:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
