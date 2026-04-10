@@ -1,6 +1,3 @@
-'use client'
-
-import { Metadata } from "next"
 import Link from "next/link"
 import { MarketingShell } from "@/components/MarketingShell"
 
