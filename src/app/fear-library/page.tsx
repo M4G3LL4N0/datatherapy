@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "Recurring fears organized into structured patterns for better understanding."
 }
 import { fearCategories } from "@/data/fearCategories"
-import { sampleBriefTopics, SampleBriefTopic } from "@/data/sampleBriefTopics"
+import { sampleBriefTopics } from "@/data/sampleBriefTopics"
 
 export default function FearLibraryPage() {
   return (
