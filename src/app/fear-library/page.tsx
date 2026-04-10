@@ -1,6 +1,10 @@
-"use client"
-
 import Link from "next/link"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Fear Library - DataTherapy",
+  description: "Recurring fears organized into structured patterns for better understanding."
+}
 import { MarketingShell } from "@/components/MarketingShell"
 import { fearCategories } from "@/data/fearCategories"
 import { sampleBriefTopics } from "@/data/sampleBriefTopics"

@@ -1,6 +1,10 @@
-"use client"
-
 import { MarketingShell } from "@/components/MarketingShell"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Sample Briefs - DataTherapy",
+  description: "See how DataTherapy Briefs convert scary information into structured clarity."
+}
 import { sampleBriefTopics } from "@/data/sampleBriefTopics"
 
 export default function SampleBriefPage() {
