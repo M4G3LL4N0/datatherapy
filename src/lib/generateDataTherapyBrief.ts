@@ -17,7 +17,7 @@ function labelForScore(value: number, type: "severity" | "urgency" | "certainty"
   return "low"
 }
 
-export function generateDataTherapyBrief({
+export default function generateDataTherapyBrief({
   input,
   category,
   tone
