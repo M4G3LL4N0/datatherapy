@@ -3,7 +3,7 @@ import { MarketingShell } from "@/components/MarketingShell"
 import { fearCategories } from "@/data/fearCategories"
 import { sampleBriefTopics } from "@/data/sampleBriefTopics"
 
-export default async function FearLibraryPage() {
+export default function FearLibraryPage() {
   return (
     <MarketingShell
       eyebrow="Fear Library"
