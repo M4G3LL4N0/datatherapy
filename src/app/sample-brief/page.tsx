@@ -1,9 +1,10 @@
-export const metadata = {
+import { Metadata } from "next"
+import { MarketingShell } from "@/components/MarketingShell"
+
+export const metadata: Metadata = {
   title: "Sample Briefs - DataTherapy",
   description: "See how DataTherapy Briefs convert scary information into structured clarity."
 }
-
-import { MarketingShell } from "@/components/MarketingShell"
 import { sampleBriefTopics, SampleBriefTopic } from "@/data/sampleBriefTopics"
 
 export default function SampleBriefPage() {
