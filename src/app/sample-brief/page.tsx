@@ -1,14 +1,7 @@
 "use client"
 
-import type { Metadata } from "next"
 import { MarketingShell } from "@/components/MarketingShell"
 import { sampleBriefTopics } from "@/data/sampleBriefTopics"
-
-export const metadata: Metadata = {
-  title: "Sample Briefs | DataTherapy",
-  description:
-    "Explore sample DataTherapy Briefs for fear categories like market panic, AI replacement, outbreaks, war headlines, crime fears, and social overthinking."
-}
 
 export default function SampleBriefPage() {
   const featured = sampleBriefTopics.filter((item) => item.featured).slice(0, 6)

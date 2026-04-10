@@ -1,16 +1,9 @@
 "use client"
 
-import type { Metadata } from "next"
 import Link from "next/link"
 import { MarketingShell } from "@/components/MarketingShell"
 import { fearCategories } from "@/data/fearCategories"
 import { sampleBriefTopics } from "@/data/sampleBriefTopics"
-
-export const metadata: Metadata = {
-  title: "Fear Library | DataTherapy",
-  description:
-    "Browse recurring fear categories and structured sample briefs across world chaos, health, money, crime, AI, misinformation, relationships, and general dread."
-}
 
 export default function FearLibraryPage() {
   return (
