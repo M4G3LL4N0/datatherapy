@@ -1,3 +1,5 @@
+'use client'
+
 import { Metadata } from "next"
 import Link from "next/link"
 import { MarketingShell } from "@/components/MarketingShell"
@@ -6,8 +8,6 @@ export const metadata: Metadata = {
   title: "Product - DataTherapy", 
   description: "How DataTherapy helps users move from vague alarm to grounded understanding."
 }
-
-'use client'
 
 
 const modules = [
