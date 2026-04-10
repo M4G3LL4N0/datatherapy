@@ -2,11 +2,11 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { MarketingShell } from "@/components/MarketingShell"
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Product | DataTherapy",
   description:
     "Learn how DataTherapy turns scary information into structured understanding through seriousness, relevance, urgency, and certainty scoring."
-} satisfies Metadata
+}
 
 const modules = [
   {
