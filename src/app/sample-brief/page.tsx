@@ -1,6 +1,5 @@
-import type { Metadata } from "next"
 import { MarketingShell } from "@/components/MarketingShell"
-import { sampleBriefTopics } from "@/data/sampleBriefTopics" // Used for filtering below
+import { sampleBriefTopics } from "@/data/sampleBriefTopics"
 
 
 export default async function SampleBriefPage(): Promise<JSX.Element> {

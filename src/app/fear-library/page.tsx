@@ -1,6 +1,5 @@
-import type { Metadata } from "next"
-import Link from "next/link"
 import { MarketingShell } from "@/components/MarketingShell"
+import Link from "next/link"
 
 import { fearCategories } from "@/data/fearCategories"
 import { sampleBriefTopics } from "@/data/sampleBriefTopics"
