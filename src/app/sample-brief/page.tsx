@@ -1,3 +1,5 @@
+"use client"
+
 import type { Metadata } from "next"
 import { MarketingShell } from "@/components/MarketingShell"
 import { sampleBriefTopics, type SampleBriefTopic } from "@/data/sampleBriefTopics"
