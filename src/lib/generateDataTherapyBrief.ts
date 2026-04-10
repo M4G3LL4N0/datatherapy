@@ -189,3 +189,5 @@ export function generateDataTherapyBrief({
     confidenceNote
   }
 }
+
+export default generateDataTherapyBrief
