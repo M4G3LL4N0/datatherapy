@@ -46,6 +46,8 @@ export interface StructuredBriefData {
   sections: BriefSection[]
 }
 
+export { StructuredBrief }
+
 export function StructuredBrief({ sections }: { sections: BriefSection[] }) {
   return (
     <div className="mt-6 space-y-6">
