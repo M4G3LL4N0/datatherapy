@@ -1,4 +1,5 @@
 import { cn } from '@/app/lib/utils'
+import Link from 'next/link'
 
 interface BriefItem {
   type?: 'text' | 'list' | 'action' | 'insight' | 'threat' | 'pattern' | 'protection' | 'response';
@@ -39,6 +40,10 @@ interface BriefItem {
 interface BriefSection {
   title: string;
   items: BriefItem[];
+}
+
+export interface StructuredBriefData {
+  sections: BriefSection[]
 }
 
 export function StructuredBrief({ sections }: { sections: BriefSection[] }) {
