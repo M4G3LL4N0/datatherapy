@@ -6,7 +6,6 @@ import { MarketingShell } from "@/components/MarketingShell"
 import { StructuredBrief } from "@/components/StructuredBrief"
 import type { StructuredBriefData } from "@/components/StructuredBrief"
 import { sampleBriefTopics } from "@/data/sampleBriefTopics"
-import type { StructuredBriefData } from "@/components/StructuredBrief"
 import { generateDataTherapyBrief } from "@/lib/generateDataTherapyBrief"
 
 const categories = [
