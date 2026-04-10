@@ -46,7 +46,7 @@ export interface StructuredBriefData {
   sections: BriefSection[]
 }
 
-export { StructuredBrief }
+export { StructuredBrief, type BriefSection, type BriefItem }
 
 export function StructuredBrief({ sections }: { sections: BriefSection[] }) {
   return (
