@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { MarketingShell } from "@/components/MarketingShell"
 import { StructuredBrief } from "@/components/StructuredBrief"
 import { sampleBriefTopics } from "@/data/sampleBriefTopics"
+import type { StructuredBriefData } from "@/components/StructuredBrief"
 
 export const metadata: Metadata = {
   title: "Sample Briefs | DataTherapy",
@@ -26,7 +27,7 @@ export default function SampleBriefPage() {
               <h2 className="mt-2 text-2xl font-semibold">{item.title}</h2>
               <p className="mt-3 text-white/70">{item.shortDescription}</p>
             </div>
-            <StructuredBrief brief={item.brief as StructuredBriefData} />
+            {item.brief && <StructuredBrief brief={item.brief} />}
           </div>
         ))}
       </section>
