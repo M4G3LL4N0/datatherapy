@@ -7,8 +7,6 @@ export const metadata: Metadata = {
   description: "A product built to turn fear into structure through repeatable brief formats and explainable scoring."
 }
 
-export default function ProductPage() {
-
 const modules = [
   {
     title: "DataTherapy Brief",
