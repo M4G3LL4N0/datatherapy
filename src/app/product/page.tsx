@@ -9,11 +9,6 @@ export const metadata: Metadata = {
 }
 
 export default function ProductPage() {
-  title: "Product | DataTherapy",
-  description:
-    "Learn how DataTherapy turns scary information into structured understanding through seriousness, relevance, urgency, and certainty scoring."
-}
-
 const modules = [
   {
     title: "DataTherapy Brief",
