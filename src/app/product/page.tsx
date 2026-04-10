@@ -83,12 +83,14 @@ export default function ProductPage() {
       <section className="mt-16 border-t border-white/15 pt-12">
         <h3 className="text-xl font-semibold">Technical Specifications</h3>
         <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3">
-          {specs.map((item) => (
-            <div key={item.title} className="rounded-3xl border border-white/15 bg-white/5 p-6">
-              <h4 className="text-lg font-medium">{item.title}</h4>
-              <p className="mt-3 text-sm leading-7 text-white/70">{item.description}</p>
-            </div>
-          ))}
+          {specs.map((item) => {
+            return (
+              <div key={item.title} className="rounded-3xl border border-white/15 bg-white/5 p-6">
+                <h4 className="text-lg font-medium">{item.title}</h4>
+                <p className="mt-3 text-sm leading-7 text-white/70">{item.description}</p>
+              </div>
+            )
+          })}
         </div>
       </section>
 
