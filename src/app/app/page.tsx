@@ -1,10 +1,10 @@
 "use client"
 
-import type { Metadata } from "next"
 import { useMemo, useState } from "react"
 import Link from "next/link"
 import { MarketingShell } from "@/components/MarketingShell"
 import { StructuredBrief } from "@/components/StructuredBrief"
+import type { StructuredBriefData } from "@/components/StructuredBrief"
 import { sampleBriefTopics } from "@/data/sampleBriefTopics"
 import type { StructuredBriefData } from "@/components/StructuredBrief"
 import { generateDataTherapyBrief } from "@/lib/generateDataTherapyBrief"
