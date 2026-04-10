@@ -245,4 +245,5 @@ export function StructuredBrief({ sections }: { sections: BriefSection[] }) {
   )
 }
 
+export { StructuredBrief }
 export type { BriefSection, BriefItem, StructuredBriefData }
