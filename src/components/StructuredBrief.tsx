@@ -46,8 +46,10 @@ export interface StructuredBriefData {
   sections: BriefSection[]
 }
 
-export function StructuredBrief({ brief }: { brief: StructuredBriefData }) {
-  const sections = brief.sections
+export function StructuredBrief({ brief, data }: { brief?: StructuredBriefData; data?: StructuredBriefData }) {
+  const briefData = brief || data
+  if (!briefData) return null
+  const sections = briefData.sections
   return (
     <div className="mt-6 space-y-6">
       {sections.map((section, index) => (
