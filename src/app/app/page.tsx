@@ -3,8 +3,7 @@
 import { useMemo, useState } from "react"
 import Link from "next/link"
 import { MarketingShell } from "@/components/MarketingShell"
-import { StructuredBrief } from "@/components/StructuredBrief"
-import type { StructuredBriefData } from "@/components/StructuredBrief"
+import { StructuredBrief, type StructuredBriefData } from "@/components/StructuredBrief"
 import { sampleBriefTopics } from "@/data/sampleBriefTopics"
 import { generateDataTherapyBrief } from "@/lib/generateDataTherapyBrief"
 
