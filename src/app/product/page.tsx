@@ -69,6 +69,7 @@ export default function ProductPage() {
       eyebrow="Product"
       title="A product built to turn fear into structure."
       description="DataTherapy helps users move from vague alarm to grounded understanding through a repeatable brief format, a fear-category system, and explainable scoring."
+      tag="DataTherapy • Product"
     >
       <section className="grid grid-cols-1 gap-8 md:grid-cols-2">
         {modules.map((item) => (
