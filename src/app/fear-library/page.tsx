@@ -1,42 +1,57 @@
-import { fearPillars } from './fear-pillars/types'
-import { MarketingShell } from '@/components/MarketingShell'
-import Link from 'next/link'
+import type { Metadata } from "next"
+import Link from "next/link"
+import { MarketingShell } from "@/components/MarketingShell"
+import { fearCategories } from "@/data/fearCategories"
+import { sampleBriefTopics } from "@/data/sampleBriefTopics"
 
-export default function FearLibrary() {
+export const metadata: Metadata = {
+  title: "Fear Library | DataTherapy",
+  description:
+    "Browse recurring fear categories and structured sample briefs across world chaos, health, money, crime, AI, misinformation, relationships, and general dread."
+}
+
+export default function FearLibraryPage() {
   return (
     <MarketingShell
-      title="Fear Pattern Library"
-      subtitle="Comprehensive catalog of threat scenarios"
-      description="Explore 50+ systematically analyzed fear patterns across all major risk categories."
-      tag="DataTherapy • Fear Library"
+      eyebrow="Fear Library"
+      title="Recurring fears, organized into structure."
+      description="DataTherapy classifies fear by underlying pattern, not just headline. The topics change over time. The fear mechanisms repeat."
     >
-      <div className="mt-8 space-y-12">
-        {fearPillars.map(pillar => (
-          <div key={pillar.id} className="border-b border-white/15 pb-8 last:border-0">
-            <h2 className="text-xl font-semibold">{pillar.name}</h2>
-            <p className="mt-2 text-white/70">{pillar.description}</p>
-            
-            <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {pillar.categories.map(category => (
-                <div key={category.id} className="rounded-lg border border-white/15 p-6 hover:bg-white/5 transition-colors">
-                  <h3 className="font-medium">{category.name}</h3>
-                  <div className="mt-4 space-y-3">
-                    {category.briefs.map(brief => (
-                      <Link
-                        key={brief.id}
-                        href={`/sample-brief/${brief.id}`}
-                        className="block text-sm text-white/80 hover:text-white hover:underline"
-                      >
-                        {brief.title}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              ))}
+      <section className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        {fearCategories.map((category) => {
+          const matches = sampleBriefTopics.filter((item) => item.fearPillar === category.slug).slice(0, 3)
+
+          return (
+            <div key={category.slug} className="rounded-3xl border border-white/15 bg-white/5 p-6">
+              <h2 className="text-xl font-semibold">{category.title}</h2>
+              <p className="mt-3 text-white/70">{category.description}</p>
+
+              <div className="mt-4 flex flex-wrap gap-2">
+                {category.mechanisms.map((mechanism) => (
+                  <span
+                    key={mechanism}
+                    className="rounded-full border border-white/10 bg-black/20 px-3 py-1 text-xs text-white/65"
+                  >
+                    {mechanism}
+                  </span>
+                ))}
+              </div>
+
+              <div className="mt-6 space-y-3">
+                {matches.map((item) => (
+                  <Link
+                    key={item.id}
+                    href="/sample-brief"
+                    className="block rounded-2xl border border-white/10 bg-black/20 p-4 transition hover:bg-white/10"
+                  >
+                    <p className="text-sm text-white/85">{item.title}</p>
+                  </Link>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          )
+        })}
+      </section>
     </MarketingShell>
   )
 }
