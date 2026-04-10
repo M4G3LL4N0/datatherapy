@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { MarketingShell } from "@/components/MarketingShell"
-import { sampleBriefTopics } from "@/data/sampleBriefTopics"
+import { sampleBriefTopics, SampleBriefTopic } from "@/data/sampleBriefTopics"
 
 export const metadata: Metadata = {
   title: "Sample Briefs | DataTherapy",
