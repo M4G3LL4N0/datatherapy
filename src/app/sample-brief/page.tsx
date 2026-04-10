@@ -2,7 +2,7 @@ import { MarketingShell } from "@/components/MarketingShell"
 import { sampleBriefTopics } from "@/data/sampleBriefTopics"
 
 
-export default async function SampleBriefPage(): Promise<JSX.Element> {
+export default function SampleBriefPage() {
   const featured = sampleBriefTopics.filter((item) => item.featured).slice(0, 6)
 
   return (
