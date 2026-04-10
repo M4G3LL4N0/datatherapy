@@ -15,6 +15,7 @@ export default function SampleBriefPage() {
       eyebrow="Sample Briefs"
       title="See how a DataTherapy Brief works."
       description="These examples show how the product converts scary information into seriousness, relevance, urgency, certainty, interpretation, and grounded next steps."
+      tag="DataTherapy • Sample Briefs"
     >
       <section className="space-y-8">
         {featured.map((item) => (

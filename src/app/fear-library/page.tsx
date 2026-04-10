@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: "Recurring fears organized into structured patterns for better understanding."
 }
 
-export default function FearLibraryPage() {
+export default async function FearLibraryPage() {
   return (
     <MarketingShell
       eyebrow="Fear Library"
