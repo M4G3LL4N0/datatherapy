@@ -6,6 +6,7 @@ interface MarketingShellProps {
   description: string
   children?: ReactNode
   tag?: string
+  eyebrow?: string
 }
 
 export function MarketingShell({
@@ -18,6 +19,11 @@ export function MarketingShell({
   return (
     <main className="min-h-screen bg-[#0a0a0a] text-white">
       <section className="mx-auto flex min-h-screen max-w-6xl flex-col justify-center px-6 py-24">
+        {eyebrow && (
+          <div className="mb-2 inline-flex w-fit items-center rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs text-white/80">
+            {eyebrow}
+          </div>
+        )}
         <div className="mb-6 inline-flex w-fit items-center rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-white/80">
           {tag}
         </div>
