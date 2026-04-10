@@ -1,6 +1,6 @@
-import { Metadata } from "next"
+import type { Metadata } from "next"
 import { MarketingShell } from "@/components/MarketingShell"
-import { sampleBriefTopics } from "@/data/sampleBriefTopics"
+import { sampleBriefTopics } from "@/data/sampleBriefTopics" // Used for filtering below
 
 export const metadata: Metadata = {
   title: "Sample Briefs - DataTherapy",
