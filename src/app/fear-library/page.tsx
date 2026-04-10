@@ -1,7 +1,9 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { MarketingShell } from "@/components/MarketingShell"
+import type { FearCategory } from "@/data/fearCategories"
 import { fearCategories } from "@/data/fearCategories"
+import type { SampleBriefTopic } from "@/data/sampleBriefTopics"
 import { sampleBriefTopics } from "@/data/sampleBriefTopics"
 
 export const metadata: Metadata = {
@@ -18,8 +20,8 @@ export default function FearLibraryPage() {
       description="DataTherapy classifies fear by underlying pattern, not just headline. The topics change over time. The fear mechanisms repeat."
     >
       <section className="grid grid-cols-1 gap-6 md:grid-cols-2">
-        {fearCategories.map((category) => {
-          const matches = sampleBriefTopics.filter((item) => item.fearPillar === category.slug).slice(0, 3)
+        {(fearCategories || []).map((category: FearCategory) => {
+          const matches = (sampleBriefTopics || []).filter((item: SampleBriefTopic) => item.fearPillar === category.slug).slice(0, 3)
 
           return (
             <div key={category.slug} className="rounded-3xl border border-white/15 bg-white/5 p-6">

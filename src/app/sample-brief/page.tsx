@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 }
 
 export default function SampleBriefPage() {
-  const featured = (sampleBriefTopics || []).filter((item) => item?.featured).slice(0, 6)
+  const featured = (sampleBriefTopics || []).filter((item: SampleBriefTopic) => item?.featured).slice(0, 6)
 
   return (
     <MarketingShell
