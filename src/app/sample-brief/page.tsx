@@ -4,7 +4,7 @@ export const metadata = {
 }
 
 import { MarketingShell } from "@/components/MarketingShell"
-import { sampleBriefTopics } from "@/data/sampleBriefTopics"
+import { sampleBriefTopics, SampleBriefTopic } from "@/data/sampleBriefTopics"
 
 export default function SampleBriefPage() {
   const featured = sampleBriefTopics.filter((item) => item.featured).slice(0, 6)

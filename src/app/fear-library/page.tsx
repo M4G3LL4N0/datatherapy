@@ -6,7 +6,7 @@ export const metadata = {
 import Link from "next/link"
 import { MarketingShell } from "@/components/MarketingShell"
 import { fearCategories } from "@/data/fearCategories"
-import { sampleBriefTopics } from "@/data/sampleBriefTopics"
+import { sampleBriefTopics, SampleBriefTopic } from "@/data/sampleBriefTopics"
 
 export default function FearLibraryPage() {
   return (
