@@ -46,7 +46,7 @@ export interface StructuredBriefData {
   sections: BriefSection[]
 }
 
-function StructuredBrief({ sections }: { sections: BriefSection[] }) {
+export function StructuredBrief({ sections }: { sections: BriefSection[] }) {
   return (
     <div className="mt-6 space-y-6">
       {sections.map((section, index) => (
@@ -245,4 +245,4 @@ function StructuredBrief({ sections }: { sections: BriefSection[] }) {
   )
 }
 
-export { StructuredBrief, type BriefSection, type BriefItem, type StructuredBriefData }
+export type { BriefSection, BriefItem, StructuredBriefData }
