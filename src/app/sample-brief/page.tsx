@@ -1,6 +1,5 @@
 import type { Metadata } from "next"
 import { MarketingShell } from "@/components/MarketingShell"
-import { StructuredBrief } from "@/components/StructuredBrief"
 import { sampleBriefTopics } from "@/data/sampleBriefTopics"
 
 export const metadata: Metadata = {
@@ -26,7 +25,6 @@ export default function SampleBriefPage() {
               <h2 className="mt-2 text-2xl font-semibold">{item.title}</h2>
               <p className="mt-3 text-white/70">{item.shortDescription}</p>
             </div>
-            {/* Brief content would go here */}
           </div>
         ))}
       </section>
