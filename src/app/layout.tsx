@@ -1,5 +1,4 @@
-import type { Viewport } from 'next'
-import { metadata as homeMetadata } from './metadata'
+import type { Metadata, Viewport } from 'next'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import './globals.css'
@@ -9,7 +8,10 @@ export const viewport: Viewport = {
   colorScheme: 'dark',
 }
 
-export const metadata = homeMetadata
+export const metadata: Metadata = {
+  title: 'DataTherapy',
+  description: 'Transform uncertainty into clarity',
+}
 
 export default function RootLayout({
   children
