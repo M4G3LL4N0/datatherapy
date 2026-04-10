@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { MarketingShell } from "@/components/MarketingShell"
+import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Product - DataTherapy", 
