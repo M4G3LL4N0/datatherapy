@@ -1,8 +1,11 @@
+import { SubpageVisual } from "@/components/SubpageVisual";
 import { MarketingShell } from '@/components/MarketingShell'
 
 export default function CognitiveLoad() {
   return (
-    <MarketingShell
+    <>
+    <SubpageVisual variant="default" />
+      <MarketingShell
       title="Cognitive Impact Assessment"
       subtitle="Measuring mental strain patterns"
       description="Tools to evaluate and predict the psychological impact of threat patterns."
@@ -18,5 +21,6 @@ export default function CognitiveLoad() {
         </ul>
       </div>
     </MarketingShell>
+  </>
   )
 }

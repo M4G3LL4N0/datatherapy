@@ -1,8 +1,11 @@
+import { SubpageVisual } from "@/components/SubpageVisual";
 import { MarketingShell } from '@/components/MarketingShell'
 
 export default function MediaAnalysis() {
   return (
-    <MarketingShell
+    <>
+    <SubpageVisual variant="default" />
+      <MarketingShell
       title="Media Amplification Analysis"
       subtitle="Understanding information cascades"
       description="Tools to track and analyze how media influences threat perception patterns."
@@ -18,5 +21,6 @@ export default function MediaAnalysis() {
         </ul>
       </div>
     </MarketingShell>
+  </>
   )
 }

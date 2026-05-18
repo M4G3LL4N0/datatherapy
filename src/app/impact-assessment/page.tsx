@@ -1,8 +1,11 @@
+import { SubpageVisual } from "@/components/SubpageVisual";
 import { MarketingShell } from '@/components/MarketingShell'
 
 export default function ImpactAssessment() {
   return (
-    <MarketingShell
+    <>
+    <SubpageVisual variant="default" />
+      <MarketingShell
       title="Impact Assessment"
       subtitle="Projecting threat consequences"
       description="Quantitative models to evaluate potential damage across multiple dimensions."
@@ -18,5 +21,6 @@ export default function ImpactAssessment() {
         </ul>
       </div>
     </MarketingShell>
+  </>
   )
 }

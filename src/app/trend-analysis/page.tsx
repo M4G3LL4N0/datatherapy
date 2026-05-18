@@ -1,8 +1,11 @@
+import { SubpageVisual } from "@/components/SubpageVisual";
 import { MarketingShell } from '@/components/MarketingShell'
 
 export default function TrendAnalysis() {
   return (
-    <MarketingShell
+    <>
+    <SubpageVisual variant="default" />
+      <MarketingShell
       title="Trend Pattern Analysis"
       subtitle="Identifying emerging threat vectors"
       description="Systematic approaches to detect and categorize recurring threat patterns."
@@ -18,5 +21,6 @@ export default function TrendAnalysis() {
         </ul>
       </div>
     </MarketingShell>
+  </>
   )
 }

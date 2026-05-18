@@ -1,3 +1,4 @@
+import { SubpageVisual } from "@/components/SubpageVisual";
 import Link from "next/link"
 import { MarketingShell } from "@/components/MarketingShell"
 import { fearCategories } from "@/data/fearCategories"
@@ -5,9 +6,12 @@ import { sampleBriefTopics } from "@/data/sampleBriefTopics"
 
 export default async function FearLibraryPage() {
   return (
-    <MarketingShell
+    <>
+    <SubpageVisual variant="default" />
+      <MarketingShell
       eyebrow="Fear Library"
       title="Recurring fears, organized into structure."
+      subtitle="Private pattern clarity"
       description="DataTherapy classifies fear by underlying pattern, not just headline. The topics change over time. The fear mechanisms repeat."
     >
       <section className="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -20,7 +24,7 @@ export default async function FearLibraryPage() {
               <p className="mt-3 text-white/70">{category.description}</p>
 
               <div className="mt-4 flex flex-wrap gap-2">
-                {category.mechanisms.map((mechanism) => (
+                {category.mechanisms.map((mechanism: string) => (
                   <span
                     key={mechanism}
                     className="rounded-full border border-white/10 bg-black/20 px-3 py-1 text-xs text-white/65"
@@ -46,5 +50,6 @@ export default async function FearLibraryPage() {
         })}
       </section>
     </MarketingShell>
+  </>
   )
 }

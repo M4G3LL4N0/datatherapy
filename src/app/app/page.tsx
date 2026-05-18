@@ -1,9 +1,11 @@
-"use client"
+"use client";
 
+import { SubpageVisual } from "@/components/SubpageVisual";
 import { useMemo, useState } from "react"
 import Link from "next/link"
 import { MarketingShell } from "@/components/MarketingShell"
-import { StructuredBrief, type StructuredBriefData } from "@/components/StructuredBrief"
+import { StructuredBrief } from "@/components/StructuredBrief"
+import type { StructuredBriefData } from "@/types/structured-brief"
 import { sampleBriefTopics } from "@/data/sampleBriefTopics"
 import { generateDataTherapyBrief } from "@/lib/generateDataTherapyBrief"
 
@@ -22,12 +24,19 @@ const tones = ["Analytical", "Grounding", "Direct"] as const
 
 export default function AppPage() {
   const featuredSamples = useMemo(() => sampleBriefTopics.slice(0, 6), [])
-  const [input, setInput] = useState(featuredSamples[0]?.inputText ?? "")
-  const [category, setCategory] = useState<string>(featuredSamples[0]?.category ?? categories[0])
-  const [tone, setTone] = useState<string>(featuredSamples[0]?.recommendedTone ?? tones[0])
-  const [result, setResult] = useState<StructuredBriefData>({
-    sections: []
-  })
+  const first = featuredSamples[0]
+  const [input, setInput] = useState(first?.inputText ?? "")
+  const [category, setCategory] = useState<string>(first?.category ?? categories[0])
+  const [tone, setTone] = useState<string>(first?.recommendedTone ?? tones[0])
+  const [result, setResult] = useState<StructuredBriefData>(() =>
+    first
+      ? generateDataTherapyBrief({
+          input: first.inputText,
+          category: first.category,
+          tone: first.recommendedTone,
+        })
+      : {}
+  )
 
   function runBrief() {
     setResult(
@@ -40,9 +49,12 @@ export default function AppPage() {
   }
 
   return (
-    <MarketingShell
+    <>
+    <SubpageVisual variant="default" />
+      <MarketingShell
       eyebrow="App"
       title="Generate a DataTherapy Brief."
+      subtitle="Private emotional signal analysis"
       description="Paste a fear-triggering thought, headline, or uncertainty and turn it into a structured interpretation."
     >
       <section className="grid grid-cols-1 gap-10 lg:grid-cols-[0.95fr_1.05fr]">
@@ -131,9 +143,11 @@ export default function AppPage() {
         </div>
 
         <div className="rounded-3xl border border-white/15 bg-white/5 p-6">
-          <StructuredBrief brief={result} />
+          <p className="text-xs uppercase tracking-[0.2em] text-white/45">Brief output</p>
+          <StructuredBrief brief={result} className="mt-2" />
         </div>
       </section>
     </MarketingShell>
+  </>
   )
 }

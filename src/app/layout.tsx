@@ -11,7 +11,8 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: 'DataTherapy',
-  description: 'Transform uncertainty into clarity',
+  description:
+    'Turn scary news and fear-triggering uncertainty into structured understanding—scores, context, calm interpretation, and next steps. Not therapy or emergency support.',
 }
 
 export default function RootLayout({

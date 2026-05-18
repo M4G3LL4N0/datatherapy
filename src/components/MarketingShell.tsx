@@ -2,7 +2,7 @@ import { ReactNode } from 'react'
 
 interface MarketingShellProps {
   title: string
-  subtitle: string
+  subtitle?: string
   description: string
   children?: ReactNode
   tag?: string
@@ -15,6 +15,7 @@ export function MarketingShell({
   description,
   children,
   tag = 'DataTherapy',
+  eyebrow,
 }: MarketingShellProps) {
   return (
     <main className="min-h-screen bg-[#0a0a0a] text-white">
@@ -30,7 +31,7 @@ export function MarketingShell({
 
         <h1 className="max-w-4xl text-5xl font-semibold tracking-tight sm:text-7xl">
           {title}
-          <span className="block text-white/65">{subtitle}</span>
+          {subtitle ? <span className="block text-white/65">{subtitle}</span> : null}
         </h1>
 
         <p className="mt-8 max-w-2xl text-lg leading-8 text-white/70">

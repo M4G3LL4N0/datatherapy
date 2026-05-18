@@ -1,3 +1,4 @@
+import { SubpageVisual } from "@/components/SubpageVisual";
 import Link from "next/link"
 import { MarketingShell } from "@/components/MarketingShell"
 
@@ -59,7 +60,9 @@ const specs = [
 
 export default function ProductPage() {
   return (
-    <MarketingShell
+    <>
+    <SubpageVisual variant="default" />
+      <MarketingShell
       eyebrow="Product"
       title="A product built to turn fear into structure."
       description="DataTherapy helps users move from vague alarm to grounded understanding through a repeatable brief format, a fear-category system, and explainable scoring."
@@ -121,5 +124,6 @@ export default function ProductPage() {
         </Link>
       </section>
     </MarketingShell>
+  </>
   )
 }

@@ -124,25 +124,14 @@ const seeds = [
   }
 ] as const
 
-export interface SampleBriefTopic {
-  id: string
-  title: string
-  slug: string
-  category: string
-  fearPillar?: string
-  shortDescription: string
-  inputText: string
-  recommendedTone: string
-  featured?: boolean
-  tags: string[]
-  brief?: any
-}
-
 export const sampleBriefTopics: SampleBriefTopic[] = seeds.map((seed) => ({
   ...seed,
+  tags: [...seed.tags],
   brief: generateDataTherapyBrief({
     input: seed.inputText,
     category: seed.category,
     tone: seed.recommendedTone
   })
 }))
+
+export type { SampleBriefTopic } from "@/types/datatherapy"

@@ -1,8 +1,11 @@
+import { SubpageVisual } from "@/components/SubpageVisual";
 import { MarketingShell } from '@/components/MarketingShell'
 
 export default function ShortTermResponse() {
   return (
-    <MarketingShell
+    <>
+    <SubpageVisual variant="default" />
+      <MarketingShell
       title="Short-Term Response Framework"
       subtitle="72 hours to 2 week mitigation strategies"
       description="Structured approaches to stabilize situations and prevent escalation."
@@ -18,5 +21,6 @@ export default function ShortTermResponse() {
         </ul>
       </div>
     </MarketingShell>
+  </>
   )
 }

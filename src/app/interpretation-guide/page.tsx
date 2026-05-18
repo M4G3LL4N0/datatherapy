@@ -1,3 +1,4 @@
+import { SubpageVisual } from "@/components/SubpageVisual";
 import { MarketingShell } from '@/components/MarketingShell'
 
 const interpretationPrinciples = [
@@ -53,7 +54,9 @@ const interpretationPrinciples = [
 
 export default function InterpretationGuide() {
   return (
-    <MarketingShell
+    <>
+    <SubpageVisual variant="default" />
+      <MarketingShell
       title="How to Interpret Fear Patterns"
       subtitle="DataTherapy's Framework for Clear Thinking"
       description="Systematic approaches to transform anxiety into actionable understanding."
@@ -79,5 +82,6 @@ export default function InterpretationGuide() {
         ))}
       </div>
     </MarketingShell>
+  </>
   )
 }

@@ -1,8 +1,12 @@
+import { SubpageVisual } from "@/components/SubpageVisual";
 import { MarketingShell } from '@/components/MarketingShell'
+import Link from 'next/link'
 
 export default function Contact() {
   return (
-    <MarketingShell
+    <>
+    <SubpageVisual variant="contact" />
+      <MarketingShell
       title="Fear Response Protocol"
       subtitle="Systematize your defense against recurring threats"
       description="Our threat pattern analysts specialize in decoding media-amplified risks and building durable protection frameworks against the most persistent fear categories."
@@ -129,5 +133,6 @@ export default function Contact() {
         </div>
       </div>
     </MarketingShell>
+  </>
   )
 }

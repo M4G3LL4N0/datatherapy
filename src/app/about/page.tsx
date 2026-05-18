@@ -1,8 +1,11 @@
+import { SubpageVisual } from "@/components/SubpageVisual";
 import { MarketingShell } from '@/components/MarketingShell'
 
 export default function About() {
   return (
-    <MarketingShell
+    <>
+    <SubpageVisual variant="about" />
+      <MarketingShell
       title="About DataTherapy"
       subtitle="Building Clarity Infrastructure"
       description="We engineer frameworks that transform ambiguity into structured understanding, helping individuals and organizations navigate complexity with confidence."
@@ -84,5 +87,6 @@ export default function About() {
         </div>
       </div>
     </MarketingShell>
+  </>
   )
 }

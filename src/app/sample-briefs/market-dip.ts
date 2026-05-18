@@ -1,4 +1,4 @@
-import { BriefItem } from '@/components/StructuredBrief';
+type BriefItem = Record<string, unknown>;
 
 export const marketDipBrief: BriefItem[] = [
   {

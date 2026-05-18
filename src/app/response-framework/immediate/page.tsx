@@ -1,8 +1,11 @@
+import { SubpageVisual } from "@/components/SubpageVisual";
 import { MarketingShell } from '@/components/MarketingShell'
 
 export default function ImmediateResponse() {
   return (
-    <MarketingShell
+    <>
+    <SubpageVisual variant="default" />
+      <MarketingShell
       title="Immediate Response Framework"
       subtitle="Rapid threat mitigation protocols"
       description="Critical actions to take within the first 72 hours of identifying a threat pattern."
@@ -18,5 +21,6 @@ export default function ImmediateResponse() {
         </ul>
       </div>
     </MarketingShell>
+  </>
   )
 }

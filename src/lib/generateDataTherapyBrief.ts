@@ -1,5 +1,4 @@
-import type { BriefTone } from "@/types/datatherapy"
-import type { StructuredBriefData } from "@/components/StructuredBrief"
+import type { StructuredBriefData } from "@/types/structured-brief"
 
 function clamp(value: number, min = 0, max = 100) {
   return Math.max(min, Math.min(max, value))

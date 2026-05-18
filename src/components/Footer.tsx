@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from "next/link"
 
 export function Footer() {
   return (
@@ -8,22 +8,19 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <h3 className="text-sm font-semibold">Product</h3>
             <Link href="/product" className="text-sm text-white/70 hover:text-white">
-              Features
+              Product
             </Link>
             <Link href="/pricing" className="text-sm text-white/70 hover:text-white">
               Pricing
             </Link>
             <Link href="/app" className="text-sm text-white/70 hover:text-white">
-              Try Now
+              Try now
             </Link>
             <Link href="/technology" className="text-sm text-white/70 hover:text-white">
               Technology
             </Link>
-            <Link href="/integrations" className="text-sm text-white/70 hover:text-white">
-              Integrations
-            </Link>
-            <Link href="/roadmap" className="text-sm text-white/70 hover:text-white">
-              Roadmap
+            <Link href="/use-cases" className="text-sm text-white/70 hover:text-white">
+              Use cases
             </Link>
           </div>
           <div className="flex flex-col gap-4">
@@ -39,21 +36,18 @@ export function Footer() {
             </Link>
           </div>
           <div className="flex flex-col gap-4">
-            <h3 className="text-sm font-semibold">Threat Framework</h3>
-            <Link href="/threat-identification" className="text-sm text-white/70 hover:text-white">
-              Threat Detection
+            <h3 className="text-sm font-semibold">Framework</h3>
+            <Link href="/fear-library" className="text-sm text-white/70 hover:text-white">
+              Fear library
             </Link>
-            <Link href="/threat-assessment" className="text-sm text-white/70 hover:text-white">
-              Impact Analysis
+            <Link href="/fear-categories" className="text-sm text-white/70 hover:text-white">
+              Fear categories
+            </Link>
+            <Link href="/interpretation-guide" className="text-sm text-white/70 hover:text-white">
+              Interpretation guide
             </Link>
             <Link href="/response-framework" className="text-sm text-white/70 hover:text-white">
-              Response Protocols
-            </Link>
-            <Link href="/case-studies" className="text-sm text-white/70 hover:text-white">
-              Real-World Applications
-            </Link>
-            <Link href="/methodology" className="text-sm text-white/70 hover:text-white">
-              Analytical Methodology
+              Response pacing
             </Link>
           </div>
           <div className="flex flex-col gap-4">
@@ -67,22 +61,10 @@ export function Footer() {
           </div>
         </div>
         <div className="border-t border-white/15 pt-8 text-center text-sm text-white/50">
-          <div className="flex flex-col items-center gap-6">
-            <div className="flex items-center gap-6">
-              <span className="text-xs font-medium text-white/50">Trusted by:</span>
-              <div className="flex items-center gap-4 opacity-70">
-                <span>Fortune 100</span>
-                <span>•</span>
-                <span>Government</span>
-                <span>•</span>
-                <span>Global 2000</span>
-              </div>
-            </div>
-            <div className="text-xs text-white/50">
-              © {new Date().getFullYear()} DataTherapy, Inc. All rights reserved.<br />
-              DataTherapy® is a registered trademark of DataTherapy, Inc.
-            </div>
-          </div>
+          <p className="text-xs leading-6 text-white/55">
+            © {new Date().getFullYear()} DataTherapy. DataTherapy is not emergency support and is not medical, legal, or
+            financial advice. Education and structured interpretation only.
+          </p>
         </div>
       </div>
     </footer>

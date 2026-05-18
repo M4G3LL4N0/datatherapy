@@ -1,8 +1,11 @@
+import { SubpageVisual } from "@/components/SubpageVisual";
 import { MarketingShell } from '@/components/MarketingShell'
 
 export default function LongTermResponse() {
   return (
-    <MarketingShell
+    <>
+    <SubpageVisual variant="default" />
+      <MarketingShell
       title="Long-Term Response Framework"
       subtitle="Building durable resilience"
       description="Systemic solutions to prevent recurrence and strengthen defenses."
@@ -18,5 +21,6 @@ export default function LongTermResponse() {
         </ul>
       </div>
     </MarketingShell>
+  </>
   )
 }

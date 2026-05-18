@@ -1,198 +1,87 @@
-import { MarketingShell } from '@/components/MarketingShell'
+import { SubpageVisual } from "@/components/SubpageVisual";
+import { MarketingShell } from "@/components/MarketingShell"
+import Link from "next/link"
 
-export default function UseCases() {
+const cases = [
+  {
+    title: "Headline panic → structured read",
+    body: "You see a breaking story and your mind jumps to worst-case meaning for your job, money, or safety. A brief separates visibility from exposure and rumor from confirmation.",
+    href: "/sample-brief",
+  },
+  {
+    title: "Financial fear without a spreadsheet spiral",
+    body: "Markets, layoffs, and recession language trigger future dread. Scoring helps you ask what is actually at stake for you this month—not for civilization in the abstract.",
+    href: "/fear-categories/money-recession",
+  },
+  {
+    title: "Health symptom or story overload",
+    body: "Symptoms plus search results can feel like certainty. The brief engine highlights uncertainty language and nudges toward appropriate clinical boundaries—not diagnosis theater.",
+    href: "/fear-categories/health-outbreaks",
+  },
+  {
+    title: "AI and career anxiety",
+    body: "When change narratives move fast, fear outruns facts. Structure turns vague obsolescence dread into relevance and urgency you can reason about.",
+    href: "/fear-categories/ai-future-of-work",
+  },
+  {
+    title: "Social signal over-reading",
+    body: "Silence and ambiguity become rejection scripts. A calm interpretation layer slows the story down and names what is known versus imagined.",
+    href: "/fear-categories/social-overthinking",
+  },
+  {
+    title: "Reality confusion and rumor stacks",
+    body: "Conflicting scary claims collapse into one big threat feeling. The product triages certainty so you can act on process, not on infinite debate.",
+    href: "/fear-categories/misinformation-reality",
+  },
+]
+
+export default function UseCasesPage() {
   return (
-    <MarketingShell
-      title="Use Cases"
-      subtitle="Where DataTherapy makes a difference"
-      description="From personal anxieties to global events, DataTherapy helps provide clarity and structure to complex situations."
-      tag="DataTherapy • Use Cases"
+    <>
+    <SubpageVisual variant="default" />
+      <MarketingShell
+      title="Use cases"
+      subtitle="Where fear-to-context helps"
+      description="DataTherapy is for people who want structured understanding when information feels loud—without pretending to be therapy, emergency support, or professional advice."
+      tag="DataTherapy • Use cases"
     >
-      <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-        <div className="rounded-lg border border-white/15 p-6">
-          <h3 className="text-lg font-semibold">Crisis Management</h3>
-          <p className="mt-2 text-sm text-white/80">
-            Real-time analysis of geopolitical events with impact assessment
-          </p>
-          <div className="mt-4 flex items-center gap-3">
-            <div className="rounded-full bg-blue-500/20 px-3 py-1 text-xs text-blue-400">
-              +80% faster analysis
-            </div>
-            <div className="rounded-full bg-green-500/20 px-3 py-1 text-xs text-green-400">
-              95% accuracy
-            </div>
-          </div>
-        </div>
-        <div className="rounded-lg border border-white/15 p-6">
-          <h3 className="text-lg font-semibold">Market Intelligence</h3>
-          <p className="mt-2 text-sm text-white/80">
-            Structured analysis of emerging market trends and shifts
-          </p>
-          <div className="mt-4 flex items-center gap-3">
-            <div className="rounded-full bg-blue-500/20 px-3 py-1 text-xs text-blue-400">
-              60% time saved
-            </div>
-            <div className="rounded-full bg-green-500/20 px-3 py-1 text-xs text-green-400">
-              90% consistency
-            </div>
-          </div>
-        </div>
-        <div className="rounded-lg border border-white/15 p-6">
-          <h3 className="text-lg font-semibold">Organizational Risk</h3>
-          <p className="mt-2 text-sm text-white/80">
-            Identification and mitigation of internal risk factors
-          </p>
-          <div className="mt-4 flex items-center gap-3">
-            <div className="rounded-full bg-blue-500/20 px-3 py-1 text-xs text-blue-400">
-              70% faster audits
-            </div>
-            <div className="rounded-full bg-green-500/20 px-3 py-1 text-xs text-green-400">
-              85% coverage
-            </div>
-          </div>
-        </div>
+      <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {cases.map((item) => (
+          <Link
+            key={item.title}
+            href={item.href}
+            className="rounded-3xl border border-white/15 bg-white/[0.04] p-6 transition hover:bg-white/[0.07]"
+          >
+            <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+            <p className="mt-3 text-sm leading-7 text-white/70">{item.body}</p>
+            <p className="mt-4 text-xs text-white/45">Open related framing →</p>
+          </Link>
+        ))}
       </div>
 
-      <div className="mt-16 border-t border-white/15 pt-12">
-        <h3 className="text-xl font-semibold">How It Works</h3>
-        <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3">
-          <div className="flex flex-col items-center text-center">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-sm font-medium">
-              1
-            </div>
-            <h4 className="mt-4 font-medium">Input Concern</h4>
-            <p className="mt-2 text-sm text-white/80">Describe your situation or paste relevant information</p>
-          </div>
-          <div className="flex flex-col items-center text-center">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-sm font-medium">
-              2
-            </div>
-            <h4 className="mt-4 font-medium">AI Analysis</h4>
-            <p className="mt-2 text-sm text-white/80">Our system processes and structures the information</p>
-          </div>
-          <div className="flex flex-col items-center text-center">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-sm font-medium">
-              3
-            </div>
-            <h4 className="mt-4 font-medium">Receive Brief</h4>
-            <p className="mt-2 text-sm text-white/80">Get a structured report with insights and actions</p>
-          </div>
-        </div>
+      <div className="mt-16 rounded-3xl border border-white/10 bg-black/25 p-8">
+        <h3 className="text-lg font-semibold text-white">How people use the MVP</h3>
+        <ol className="mt-6 list-decimal space-y-4 pl-5 text-sm leading-7 text-white/70">
+          <li>Paste a fear-triggering thought or headline into the generator.</li>
+          <li>Pick the closest category and tone for phrasing.</li>
+          <li>Read the brief as a pacing tool—not a prediction engine.</li>
+        </ol>
+        <p className="mt-8 text-sm text-white/55">
+          <Link href="/app" className="text-white underline-offset-4 hover:underline">
+            Open the app
+          </Link>{" "}
+          ·{" "}
+          <Link href="/app/how-it-works" className="text-white underline-offset-4 hover:underline">
+            How it works
+          </Link>
+        </p>
       </div>
 
-      <div className="mt-16 border-t border-white/15 pt-12">
-        <h3 className="text-xl font-semibold">Customer Success Stories</h3>
-        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
-          <div className="rounded-lg border border-white/15 p-6">
-            <h4 className="font-medium">Global Bank</h4>
-            <p className="mt-2 text-sm text-white/80">
-              "Reduced risk assessment time by 65% while improving accuracy by 40%"
-            </p>
-            <div className="mt-4 text-xs text-blue-400">Read Case Study →</div>
-          </div>
-          <div className="rounded-lg border border-white/15 p-6">
-            <h4 className="font-medium">Healthcare Network</h4>
-            <p className="mt-2 text-sm text-white/80">
-              "Improved decision speed while maintaining 99.7% consistency across teams"
-            </p>
-            <div className="mt-4 text-xs text-blue-400">Read Case Study →</div>
-          </div>
-        </div>
-      </div>
-
-      <div className="mt-16 border-t border-white/15 pt-12">
-        <h3 className="text-xl font-semibold">Frequently Asked Questions</h3>
-        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
-          {[
-            {
-              question: "Can I change plans later?",
-              answer: "Yes, you can upgrade or downgrade at any time."
-            },
-            {
-              question: "Is there a free trial?",
-              answer: "The Professional plan includes a 14-day free trial."
-            },
-            {
-              question: "What payment methods do you accept?",
-              answer: "We accept all major credit cards and enterprise invoicing."
-            },
-            {
-              question: "How is billing handled?",
-              answer: "Plans are billed monthly or annually with a discount."
-            }
-          ].map((faq, i) => (
-            <div key={i} className="rounded-lg border border-white/15 p-6">
-              <h4 className="font-medium">{faq.question}</h4>
-              <p className="mt-2 text-sm text-white/80">{faq.answer}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="mt-16 border-t border-white/15 pt-12">
-        <h3 className="text-xl font-semibold">What Our Customers Say</h3>
-        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
-          <div className="rounded-lg border border-white/15 p-6">
-            <p className="text-sm text-white/80">
-              "The Professional plan paid for itself within weeks by saving our team hours of analysis time."
-            </p>
-            <div className="mt-4 text-sm font-medium">- Startup Founder</div>
-          </div>
-          <div className="rounded-lg border border-white/15 p-6">
-            <p className="text-sm text-white/80">
-              "The Enterprise plan's custom models have transformed how we assess risk across our organization."
-            </p>
-            <div className="mt-4 text-sm font-medium">- Fortune 500 Executive</div>
-          </div>
-        </div>
-      </div>
-
-      <div className="mt-16 border-t border-white/15 pt-12">
-        <h3 className="text-xl font-semibold">How It Works</h3>
-        <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3">
-          <div className="flex flex-col items-center text-center">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-sm font-medium">
-              1
-            </div>
-            <h4 className="mt-4 font-medium">Data Ingestion</h4>
-            <p className="mt-2 text-sm text-white/80">Collect and process structured and unstructured data</p>
-          </div>
-          <div className="flex flex-col items-center text-center">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-sm font-medium">
-              2
-            </div>
-            <h4 className="mt-4 font-medium">AI Analysis</h4>
-            <p className="mt-2 text-sm text-white/80">Apply multi-model AI for contextual understanding</p>
-          </div>
-          <div className="flex flex-col items-center text-center">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-sm font-medium">
-              3
-            </div>
-            <h4 className="mt-4 font-medium">Insight Delivery</h4>
-            <p className="mt-2 text-sm text-white/80">Generate structured briefs with actionable insights</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="mt-16 border-t border-white/15 pt-12">
-        <h3 className="text-xl font-semibold">Customer Success Stories</h3>
-        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
-          <div className="rounded-lg border border-white/15 p-6">
-            <h4 className="font-medium">Global Bank</h4>
-            <p className="mt-2 text-sm text-white/80">
-              "The AI architecture has transformed how we process complex financial data."
-            </p>
-            <div className="mt-4 text-xs text-blue-400">Read Case Study →</div>
-          </div>
-          <div className="rounded-lg border border-white/15 p-6">
-            <h4 className="font-medium">Healthcare Network</h4>
-            <p className="mt-2 text-sm text-white/80">
-              "The contextual understanding engine has improved our decision-making process."
-            </p>
-            <div className="mt-4 text-xs text-blue-400">Read Case Study →</div>
-          </div>
-        </div>
-      </div>
+      <p className="mt-12 text-xs leading-6 text-white/45">
+        If you are in immediate danger, contact emergency services or appropriate local crisis resources. DataTherapy
+        provides education and structured interpretation only.
+      </p>
     </MarketingShell>
+  </>
   )
 }
