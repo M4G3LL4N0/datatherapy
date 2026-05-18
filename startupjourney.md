@@ -14,6 +14,8 @@
 - Git push status: not run this loop
 - Last updated: 2026-05-18
 
+- Overall reality label: **VERIFIED (local build) + DEMO (product flows)**
+
 ## 2. Portfolio Score
 - Product clarity: 7
 - MVP reality: 7
@@ -44,12 +46,15 @@
 - Best proof step: screen recording of primary demo flow
 
 ## 4. Evidence Map
-- Proven: repo routes and build status in matrix
-- Demo: sample/local data flows
-- Planned: production auth and billing if applicable
-- Hypothesis: ICP and pricing
-- Unknown: live traffic and retention
-- Research needed: competitor wedge
+- Known: Repo routes and package.json present in portfolio scan
+- Verified: Build status from `.noaerth_full_build_status.tsv` when PASS
+- Demo: Primary product flows use sample or local mock data unless marked otherwise
+- Planned: Production auth, billing, and live integrations where not in repo
+- Hypothesis: ICP, pricing, and growth wedge
+- Assumption: Subdomain `https://datatherapy.noaerth.com` may be live
+- Unknown: Revenue, retention, and live traffic without external proof
+- Blocked: None unless build FAIL or missing credentials documented in upgrade report
+
 
 ## 5. 10-Second Startup Explanation
 - What it is: Datatherapy product (see homepage hero)
@@ -92,3 +97,9 @@
 - Next build step: `pnpm build`
 - Biggest blocker: none if build PASS
 - Suggested next command: `cd /Users/joshuadavis/startups/datatherapy && pnpm dev`
+
+## 8. Work Completed This Loop (Hyperion v6 — 2026-05-18)
+- Mode: REALITY LABELS + portfolio memory
+- Build matrix: **PASS** (portfolio TSV)
+- Reality labels: snapshot + evidence map normalized
+- Git: see per-project safe commit

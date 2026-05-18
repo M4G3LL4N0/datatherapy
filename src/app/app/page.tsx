@@ -8,6 +8,7 @@ import { StructuredBrief } from "@/components/StructuredBrief"
 import type { StructuredBriefData } from "@/types/structured-brief"
 import { sampleBriefTopics } from "@/data/sampleBriefTopics"
 import { generateDataTherapyBrief } from "@/lib/generateDataTherapyBrief"
+import { BriefExportBar } from "@/components/BriefExportBar"
 
 const categories = [
   "News / World Events",
@@ -144,6 +145,7 @@ export default function AppPage() {
 
         <div className="rounded-3xl border border-white/15 bg-white/5 p-6">
           <p className="text-xs uppercase tracking-[0.2em] text-white/45">Brief output</p>
+          <BriefExportBar brief={result} />
           <StructuredBrief brief={result} className="mt-2" />
         </div>
       </section>
