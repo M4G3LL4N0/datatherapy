@@ -1,8 +1,13 @@
 import { MarketingGraphicsStack } from "@/components/MarketingGraphicsStack";
+import { TrustStrip } from "@/components/TrustStrip";
 import Link from "next/link"
 
 export default function Home() {
   return (
+        <div className="mx-auto max-w-6xl px-4 py-4 sm:px-6">
+          <TrustStrip />
+        </div>
+        <MarketingGraphicsStack />
     <div className="min-h-screen bg-[#0a0a0a] text-white">
       <section className="mx-auto flex min-h-[calc(100vh-8rem)] max-w-6xl flex-col justify-center px-6 pb-24 pt-32">
         <p className="text-xs uppercase tracking-[0.28em] text-white/45">Fear intelligence</p>
@@ -63,5 +68,3 @@ export default function Home() {
     </div>
   )
 }
-
-<MarketingGraphicsStack />

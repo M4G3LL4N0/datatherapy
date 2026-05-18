@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.0",
+  "project_folder": "/Users/joshuadavis/startups/datatherapy",
+  "startup_name": "DataTherapy",
+  "aliases": ["CalmSignal"],
+  "domain": "",
+  "category": "fear intelligence and structured context platform",
+  "stage": "mvp",
+  "one_line_description": "DataTherapy turns scary information into structured understanding.",
+  "target_users": [
+    "People activated by scary headlines, rumors, or uncertainty",
+    "Users seeking calm structure without therapy or sensational news",
+    "Founders demoing clarity infrastructure for fear-triggering information"
+  ],
+  "core_problem": "Fear expands faster than verified facts; people need seriousness, relevance, urgency, and certainty framed without panic or fake clinical authority.",
+  "core_solution": "A deterministic DataTherapy Brief and fear-category system that converts input into scores, interpretations, myth vs reality, grounding, and next steps.",
+  "differentiation": "Fear pillars + explainable heuristics + premium dark UX + local MVP engine without paid APIs; explicit non-therapy, non-emergency positioning.",
+  "mvp_scope": {
+    "primary_goal": "Stable Next.js build, coherent types, preserved routes, manual Vercel-ready artifact.",
+    "included_features": [
+      "Local brief generation",
+      "Sample brief library (10 topics)",
+      "Fear library and category pages",
+      "Marketing and app shell pages"
+    ],
+    "excluded_for_now": [
+      "Auth",
+      "Database",
+      "Live news ingestion",
+      "Payments beyond placeholder checkout route"
+    ],
+    "future_features": [
+      "50+ sample briefs with slug pages",
+      "Share/export cards",
+      "Personalization",
+      "API layer",
+      "Email digest"
+    ]
+  },
+  "website": {
+    "primary_message": "Signal over spiral—structured understanding for fear-triggering information.",
+    "tone": "Calm, precise, product-led; no sensationalism; no clinical therapy claims.",
+    "routes": [
+      "/",
+      "/product",
+      "/fear-library",
+      "/fear-categories",
+      "/fear-categories/[categoryId]",
+      "/use-cases",
+      "/pricing",
+      "/technology",
+      "/investors",
+      "/about",
+      "/contact",
+      "/sample-brief",
+      "/app",
+      "/app/examples",
+      "/app/how-it-works",
+      "/brief",
+      "/privacy",
+      "/terms",
+      "/response-framework"
+    ],
+    "sections": [
+      "Hero and positioning",
+      "Product modules",
+      "Fear library",
+      "Sample briefs",
+      "App generator",
+      "Legal placeholders"
+    ],
+    "cta": "Try a brief in /app",
+    "seo_keywords": [
+      "structured understanding",
+      "fear and news anxiety",
+      "calm interpretation",
+      "uncertainty clarity",
+      "brief engine",
+      "signal over spiral"
+    ]
+  },
+  "product": {
+    "core_flows": [
+      "Paste fear input → choose category/tone → read brief",
+      "Browse fear categories → read mechanisms and prompts",
+      "Browse sample briefs → open app"
+    ],
+    "demo_flows": [
+      "Featured sample topics",
+      "Fear library cards",
+      "Category detail pages"
+    ],
+    "data_model_notes": [
+      "StructuredBriefData supports engine fields plus legacy sections",
+      "FearCategoryDetail is canonical for category pages",
+      "SampleBriefTopic carries optional generated brief"
+    ],
+    "auth_required": false,
+    "database_required": false,
+    "api_required": false
+  },
+  "design_system": {
+    "visual_style": "Premium dark, glass cards, minimal color accents",
+    "colors": ["#0a0a0a background", "white text", "white/10–15 borders", "muted red/amber/green for severity only"],
+    "typography": "System sans, large marketing headings, readable body",
+    "layout_principles": ["Grid sections", "rounded-3xl cards", "fixed header", "generous vertical rhythm"],
+    "animation_style": "Subtle hover only",
+    "avoid": ["Loud gradients", "generic SaaS illustrations", "clinical staging", "fake enterprise logos"]
+  },
+  "technical_stack": {
+    "framework": "Next.js",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "package_manager": "pnpm",
+    "deployment": "Vercel",
+    "database": "",
+    "auth": "",
+    "apis": []
+  },
+  "important_files": {
+    "routes": ["src/app/**/page.tsx", "src/app/api/checkout/route.ts"],
+    "components": ["src/components/MarketingShell.tsx", "src/components/StructuredBrief.tsx", "src/components/Header.tsx", "src/components/Footer.tsx"],
+    "lib": ["src/lib/generateDataTherapyBrief.ts", "src/app/lib/utils.ts"],
+    "data": ["src/data/fearCategories.ts", "src/data/sampleBriefTopics.ts"],
+    "public_assets": ["public/**"],
+    "config": ["next.config.ts", "tsconfig.json", "postcss.config.mjs", "package.json", "pnpm-lock.yaml"]
+  },
+  "preserve": {
+    "copy": ["Product-led fear intelligence positioning", "Safety disclaimers"],
+    "features": ["Local brief engine", "Eight fear pillars", "Sample topics"],
+    "components": ["MarketingShell", "StructuredBrief"],
+    "assets": ["Public static marks where referenced"],
+    "technical_decisions": ["pnpm only", "App Router under src/app", "Strict TypeScript"]
+  },
+  "do_not": {
+    "delete": ["src source tree", ".autobuilder memory", "RECOVERY_NOTES.md", "AUTOBUILDER_FOUNDATION.json", "pnpm-lock.yaml"],
+    "expose_publicly": ["Internal Autobuilder runbooks", "Unredacted agent transcripts", "Placeholder API secrets"],
+    "change_without_reason": ["Premium dark visual system", "Core brief schema fields"],
+    "build": ["With npm", "With ignoreBuildErrors hacks for production"],
+    "drift_toward": ["Generic enterprise threat fiction", "Clinical therapy claims", "Automated prod deploy without review"]
+  },
+  "autobuilder_strategy": {
+    "north_star": "Demo-ready DataTherapy with honest positioning and a trustworthy brief format.",
+    "quality_bar": "pnpm lint clean; pnpm build green; types coherent; no broken nav.",
+    "next_priorities": [
+      "Expand sample library",
+      "Slug pages for samples",
+      "Engine unit tests",
+      "SEO passes on pillar pages"
+    ],
+    "safe_improvement_types": ["Copy refinement", "Accessibility", "Performance", "Additional static routes"],
+    "unsafe_improvement_types": ["Silent auth", "Medical claims", "Emergency handling without human resources"],
+    "preferred_task_size": "medium",
+    "build_frequency_guidance": "Run pnpm build after any route or type change.",
+    "deployment_guidance": "manual_vercel_only"
+  },
+  "cleanup_policy": {
+    "safe_to_delete": [".next", ".turbo", ".vercel/cache", "coverage", "playwright-report", "test-results", ".cache", ".parcel-cache", "*.log", ".DS_Store"],
+    "must_preserve": ["src", "public", "package.json", "pnpm-lock.yaml", "tsconfig.json", "next.config.ts", "RECOVERY_NOTES.md", "AUTOBUILDER_FOUNDATION.json", ".autobuilder", ".git"],
+    "large_file_review_paths": ["public", "manual-fix"],
+    "post_build_cleanup_commands": ["rm -rf .next", "du -sh ."]
+  },
+  "last_recovery_summary": {
+    "date": "2026-05-10",
+    "restored": ["All primary marketing and app routes via src/app only"],
+    "improved": ["Unified fear category data", "Dual-schema StructuredBrief", "Product-native use cases", "Navigation integrity"],
+    "fixed": ["App Router root conflict", "Type drift", "Removed unused auth/Supabase deps"],
+    "removed": ["Root app/", "Stub fear-categories types", "lib/supabase.ts"],
+    "remaining_risks": ["Legal pages are stubs", "Brief form page not wired to engine", "Heuristic engine not yet covered by tests"]
+  }
+}

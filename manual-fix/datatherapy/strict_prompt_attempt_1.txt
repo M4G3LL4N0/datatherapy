@@ -1,0 +1,13 @@
+DO NOT explain.
+DO NOT suggest.
+DO NOT ask questions.
+ONLY fix the build error.
+ONLY modify files needed to pass the build.
+
+Error signature:
+<<ERROR_SIGNATURE>>
+
+Files you may modify:
+npm-shrinkwrap.json package-lock.json package.json 
+
+Apply minimal edits required to make the build pass. Do not add comments, do not change unrelated code.

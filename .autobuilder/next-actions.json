@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "prioritized_tasks": [
+    {
+      "id": "samples-50",
+      "title": "Expand sample brief library from 10 to 50",
+      "priority": 1,
+      "effort": "medium"
+    },
+    {
+      "id": "sample-slugs",
+      "title": "Add sample brief detail pages by slug",
+      "priority": 2,
+      "effort": "medium"
+    },
+    {
+      "id": "crisis-page",
+      "title": "Add safer crisis/support page with clear emergency disclaimers",
+      "priority": 3,
+      "effort": "small"
+    },
+    {
+      "id": "export-brief",
+      "title": "Add save/share/export for brief cards",
+      "priority": 4,
+      "effort": "medium"
+    },
+    {
+      "id": "news-later",
+      "title": "Add live news ingestion later (explicitly out of MVP)",
+      "priority": 5,
+      "effort": "large"
+    },
+    {
+      "id": "personalization-later",
+      "title": "Add personalization later",
+      "priority": 6,
+      "effort": "large"
+    },
+    {
+      "id": "api-later",
+      "title": "Add API later",
+      "priority": 7,
+      "effort": "large"
+    },
+    {
+      "id": "digest-later",
+      "title": "Add email digest later",
+      "priority": 8,
+      "effort": "large"
+    },
+    {
+      "id": "seo",
+      "title": "Improve SEO titles/descriptions per route",
+      "priority": 9,
+      "effort": "small"
+    },
+    {
+      "id": "engine-tests",
+      "title": "Add tests for brief engine determinism and bounds",
+      "priority": 10,
+      "effort": "medium"
+    }
+  ]
+}

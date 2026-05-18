@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "project_folder": "/Users/joshuadavis/startups/datatherapy",
+  "startup_name": "DataTherapy",
+  "last_updated": "2026-05-10T12:00:00Z",
+  "status": "mvp_recovery_complete",
+  "build_status": {
+    "pnpm_install": "pass",
+    "pnpm_lint": "pass",
+    "pnpm_typecheck": "pass_via_tsc_noEmit",
+    "pnpm_build": "pass",
+    "routes_count": 29
+  },
+  "deploy_status": {
+    "vercel": "manual_only_not_run",
+    "github_push": "not_run"
+  },
+  "disk_status": {
+    "note": "Post-validation cleanup may remove .next; rerun pnpm build before deploy.",
+    "large_files_audit": "run find -size +25M after install"
+  },
+  "recent_changes": [
+    "Consolidated App Router under src/app",
+    "Expanded fearCategories and StructuredBrief types",
+    "Removed next-auth and Supabase",
+    "Added app/examples, app/how-it-works, response-framework hub, privacy, terms"
+  ],
+  "open_issues": [
+    "Brief marketing page form is illustrative only",
+    "Privacy/terms need legal review for production",
+    "Sample library smaller than 50"
+  ],
+  "next_actions": [
+    "Expand sample brief library from 10 to 50",
+    "Add sample brief detail pages by slug",
+    "Add safer crisis/support page with jurisdiction-appropriate resources",
+    "Add save/share/export for brief cards",
+    "Plan live news ingestion later",
+    "Plan personalization later",
+    "Plan API later",
+    "Plan email digest later",
+    "Improve SEO metadata per route",
+    "Add tests for brief engine"
+  ],
+  "last_agent_notes": "Single src/app root; checkout API at src/app/api/checkout; deterministic brief engine unchanged in scoring logic; visuals preserved as dark glass system."
+}
