@@ -10,7 +10,7 @@ export function ProblemContrastSection() {
         </div>
         <div className="rounded-2xl border ring-teal-500/20 bg-teal-500/10 p-6">
           <p className="text-xs uppercase text-teal-300">After</p>
-          <ul className="mt-4 space-y-2 text-sm text-slate-300"><li>Structured intake</li><li>Clear outputs</li><li>Next action visible</li></ul>
+          <ul className="mt-4 space-y-2 text-sm text-slate-300"><li>Structured brief</li><li>Separate scores</li><li>Exportable brief</li></ul>
         </div>
       </div>
     </section>

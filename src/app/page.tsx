@@ -4,6 +4,7 @@ import Link from "next/link"
 
 export default function Home() {
   return (
+    <>
         <div className="mx-auto max-w-6xl px-4 py-4 sm:px-6">
           <TrustStrip />
         </div>
@@ -66,5 +67,6 @@ export default function Home() {
         </p>
       </section>
     </div>
+    </>
   )
 }

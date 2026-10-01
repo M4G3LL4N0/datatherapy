@@ -2,20 +2,20 @@
 export function FeatureVisualGrid() {
   const items = [
   {
-    "title": "Intake",
-    "body": "Step 1 in the clinical education ui workflow."
+    "title": "Headline",
+    "body": "Paste a fear-triggering headline, rumor, or uncertainty."
   },
   {
-    "title": "Plan",
-    "body": "Step 2 in the clinical education ui workflow."
+    "title": "Category",
+    "body": "Sort it into the topics already used by the brief form."
   },
   {
-    "title": "Check-in",
-    "body": "Step 3 in the clinical education ui workflow."
+    "title": "Scores",
+    "body": "Read seriousness, relevance, urgency, and certainty as separate anchors."
   },
   {
-    "title": "Summary",
-    "body": "Step 4 in the clinical education ui workflow."
+    "title": "Brief",
+    "body": "A structured interpretation for review. Not therapy and not emergency support."
   }
 ];
   return (

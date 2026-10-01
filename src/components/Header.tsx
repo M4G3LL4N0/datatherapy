@@ -32,12 +32,12 @@ export function Header() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/15 bg-[#0a0a0a]/95 backdrop-blur">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-6 py-4">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center gap-3">
           <Link href="/" className="text-lg font-semibold" onClick={() => setOpen(false)}>
             DataTherapy
           </Link>
-          <span className="rounded-full border border-white/15 bg-white/5 px-2.5 py-1 text-xs font-medium text-white/80">
+          <span className="rounded-full border border-white/15 bg-white/5 px-2.5 py-1 text-sm font-medium text-white/80">
             MVP
           </span>
         </div>
@@ -48,7 +48,7 @@ export function Header() {
               Explore
             </Link>
             <div className="absolute top-full left-1/2 mt-2 hidden w-56 -translate-x-1/2 rounded-lg border border-white/15 bg-[#0a0a0a] p-2 group-hover:block">
-              <div className="px-3 py-2 text-xs text-white/50">Library</div>
+              <div className="px-3 py-2 text-sm text-white/50">Library</div>
               <Link href="/fear-library" className="flex items-center gap-2 px-3 py-2 text-sm hover:bg-white/5">
                 <span className="h-2 w-2 rounded-full bg-red-500" />
                 Fear library
@@ -104,7 +104,7 @@ export function Header() {
               Respond
             </Link>
             <div className="absolute top-full left-1/2 mt-2 hidden w-56 -translate-x-1/2 rounded-lg border border-white/15 bg-[#0a0a0a] p-2 group-hover:block">
-              <div className="px-3 py-2 text-xs text-white/50">Pacing</div>
+              <div className="px-3 py-2 text-sm text-white/50">Pacing</div>
               <Link href="/response-framework/immediate" className="flex items-center gap-2 px-3 py-2 text-sm hover:bg-white/5">
                 <span className="h-2 w-2 rounded-full bg-red-500" />
                 Immediate
@@ -128,12 +128,12 @@ export function Header() {
         </div>
 
         <div className="flex items-center gap-2 md:hidden">
-          <Link href="/app" className="rounded-full bg-white/10 px-3 py-1.5 text-xs font-medium" onClick={() => setOpen(false)}>
+          <Link href="/app" className="rounded-full bg-white/10 px-3 py-1.5 text-sm font-medium" onClick={() => setOpen(false)}>
             Try now
           </Link>
           <button
             type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 text-white"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-white/15 text-white"
             aria-expanded={open}
             aria-controls="datatherapy-mobile-nav"
             onClick={() => setOpen((v) => !v)}
@@ -147,10 +147,10 @@ export function Header() {
       {open && (
         <nav
           id="datatherapy-mobile-nav"
-          className="mx-auto flex max-h-[70vh] max-w-6xl flex-col gap-1 overflow-y-auto border-t border-white/10 px-6 py-4 md:hidden"
+          className="mx-auto flex max-h-[70vh] max-w-6xl flex-col gap-1 overflow-y-auto border-t border-white/10 px-4 sm:px-6 py-3 sm:py-4 md:hidden"
           aria-label="Mobile"
         >
-          <p className="px-3 py-1 text-xs uppercase tracking-wide text-white/40">Informational tools — not clinical advice</p>
+          <p className="px-3 py-1 text-sm uppercase tracking-wide text-white/40">Informational tools — not clinical advice</p>
           {mobileLinks.map((l) => (
             <Link
               key={l.href}
